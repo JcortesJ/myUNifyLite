@@ -1,20 +1,29 @@
 html,
 body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    font-family: 'graphik', sans-serif;
+    margin-left: auto;
+    /*es cuestion de margin-left para borrar las lineas*/
+    width: 100%;
+    overflow-x: clip;
+    background-color: #FAFAFA;
+    scroll-behavior: smooth;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+@media (max-width: 600px) {
+    body,
+    html {
+        background-image: url('/inicio_login.gif');
+        background-repeat: no-repeat;
+        background-size: auto 900px;
+        background-position-x: center;
+        background-position-y: bottom;
+        height: 100%;
+    }
 }
 
-* {
-  box-sizing: border-box;
-}
 
+/*
+// esta parte nos sirve para poner modo oscuro, pero no creo que la toquemos para la entrega
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
@@ -24,3 +33,5 @@ a {
     background: black;
   }
 }
+
+*/

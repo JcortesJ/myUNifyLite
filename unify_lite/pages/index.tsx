@@ -14,25 +14,22 @@ const Home: NextPage = () => {
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-         My UNify Lite
+         MyUNify Lite
         </h1>
-        <br>
-        </br>
-        <h3>Este es un sitio en construcción 👀</h3>
-
+        <div className={styles.avisoAdvertencia}>
+          <h1>Ups... esta página no está diseñada para computadores</h1>
+          <h2>Por favor ingresa desde un celular</h2>
+        </div>
+        <div className={styles.imagenLogo}></div>
+        <section className={styles.Flex1}>
+          <button className={styles.botonEstandar}>Login</button>
+          <button className={styles.botonEstandar}>Registrate</button>
+        </section>
+       
       </main>
 
       <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-          </span>
-        </a>
+      <img src='./Frame.ico' width={50} height={50}></img> <p>MyUNify, un proyecto de <strong>MyUNify</strong></p>
       </footer>
     </div>
   )
