@@ -1,10 +1,10 @@
 .container {
-    background-image: url('/inicio_login.gif');
+    /*background-image: url('/inicio_login.gif');*/
     background-repeat: no-repeat;
     background-size: auto 900px;
     background-position-x: center;
     background-position-y: bottom;
-    height: 900px;
+    /*height: 900px; */
     margin-top: -20px;
     margin-bottom: auto;
     scroll-behavior: smooth;
@@ -133,7 +133,7 @@
         background-size: contain;
         background-position-x: center;
         /*border: 2px solid; */
-        background-image: url('/logo.svg');
+        background-image: url('/logoM.svg');
     }
 }
 
