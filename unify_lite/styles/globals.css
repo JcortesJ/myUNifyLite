@@ -1,15 +1,50 @@
+@font-face {
+    font-family: 'TitilliumWeb';
+    src: url("/styles/TitilliumWeb-Regular.ttf");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'arimo';
+    src: url("/styles/Arimo-Italic-VariableFont_wght.ttf");
+    font-weight: normal;
+    font-style: normal;
+}
+
 html,
 body {
-    font-family: 'graphik', sans-serif;
+    font-family: 'TitilliumWeb', sans-serif;
     margin-left: auto;
     /*es cuestion de margin-left para borrar las lineas*/
     width: 100%;
     overflow-x: clip;
-    background-color: #FAFAFA;
+    background-color: white;
     scroll-behavior: smooth;
 }
 
+a {
+    color: white;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+a:active {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
 @media (max-width: 600px) {
+    /*
     body,
     html {
         background-image: url('/inicio_login.gif');
@@ -18,8 +53,10 @@ body {
         background-position-x: center;
         background-position-y: bottom;
         height: 100%;
-        overflow-y: hidden;
-    }
+        /* overflow-y: hidden
+      ; 
+}
+*/
 }
 
 

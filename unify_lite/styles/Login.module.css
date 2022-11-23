@@ -1,14 +1,5 @@
 .container {
-    background-image: url('/inicio_login.gif');
-    background-repeat: no-repeat;
-    background-size: auto 900px;
-    background-position-x: center;
-    background-position-y: bottom;
-    height: 700px;
-    margin-top: -20px;
-    margin-bottom: auto;
-    scroll-behavior: smooth;
-    /* overflow-y: hidden; */
+    background-color: white;
 }
 
 .main {
@@ -80,6 +71,32 @@
     display: none;
 }
 
+.linkNegro {
+    color: black;
+    text-decoration: underline;
+    text-decoration-color: black;
+}
+
+.linkNegro:link {
+    text-decoration: underline;
+    text-decoration-color: black;
+}
+
+.linkNegro:visited {
+    text-decoration: underline;
+    text-decoration-color: black;
+}
+
+.linkNegro:active {
+    text-decoration: underline;
+    text-decoration-color: black;
+}
+
+.linkNegro:hover {
+    color: #616ee4;
+    text-decoration-color: #616ee4;
+}
+
 @media (max-width: 600px) {
     .grid {
         width: 100%;
@@ -111,17 +128,29 @@
         /* border: 2px solid; 
          */
         display: flex;
+        margin-top: 10%;
         flex-direction: column;
         width: 98%;
         height: fit-content;
-        padding-bottom: 10%;
+        padding-bottom: 0;
         padding-top: 10%;
     }
     .footer {
-        display: none;
+        margin-top: -5%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-top: none;
+    }
+    .footer p {
+        margin-bottom: -2%;
+        font-size: 24px;
+    }
+    .footer a {
+        font-size: 24px;
     }
     .title {
-        display: none;
+        font-family: 'arimo', sans-serif;
     }
     .imagenLogo {
         padding: 2%;
@@ -136,20 +165,3 @@
         background-image: url('/logo.svg');
     }
 }
-
-
-/*
-@media (prefers-color-scheme: dark) {
-    .card,
-    .footer {
-        border-color: #222;
-    }
-    .code {
-        background: #111;
-    }
-    .logo img {
-        filter: invert(1);
-    }
-}
-
-*/

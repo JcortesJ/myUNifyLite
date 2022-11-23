@@ -2,38 +2,38 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
-import styles from '../styles/Home.module.css'
-
-const Home: NextPage = () => {
+import InputDef from '../components/inputBonito'
+import styles from '../styles/Login.module.css'
+const Login = () => {
   return (
     <div className={styles.container}>
       <Head>
-        <title>MyUNifyLite</title>
+        <title>Login</title>
         <meta name="description" content="Social Media App" />
         <link rel="icon" href="/Frame.ico" />
       </Head>
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-         MyUNify Lite
+         MyUNify
         </h1>
         <div className={styles.avisoAdvertencia}>
           <h1>Ups... esta página no está diseñada para computadores</h1>
           <h2>Por favor ingresa desde un celular</h2>
         </div>
-        <div className={styles.imagenLogo}></div>
+        <InputDef {...["Usuario"]}></InputDef>
+        <InputDef {...["Contraseña"]}></InputDef>
         <section className={styles.Flex1}>
-        <Link href={"/login"}><button className={styles.botonEstandar}>Login </button></Link>
-          <button className={styles.botonEstandar}>Registrate</button>
+        <button className={styles.botonEstandar}><Link href={"/login"}>Login</Link> </button>
         </section>
        
       </main>
 
       <footer className={styles.footer}>
-      <img src='./Frame.ico' width={50} height={50}></img> <p>MyUNify, un proyecto de <strong>MyUNify</strong></p>
+        <p> No tienes cuenta? </p>  <br></br> <a className={styles.linkNegro} href={"/registro"}>Registrate Aquí</a>
       </footer>
     </div>
   )
 }
 
-export default Home
+export default Login;
