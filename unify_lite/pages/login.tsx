@@ -24,7 +24,7 @@ const Login = () => {
         <InputDef {...["Usuario"]}></InputDef>
         <InputDef {...["Contraseña"]}></InputDef>
         <section className={styles.Flex1}>
-        <button className={styles.botonEstandar}><Link href={"/login"}>Login</Link> </button>
+        <button className={styles.botonEstandar}><Link href={"/registro"}>Login</Link> </button>
         </section>
        
       </main>
