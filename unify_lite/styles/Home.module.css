@@ -1,11 +1,13 @@
 .container {
     /*background-image: url('/inicio_login.gif');*/
+    /*
     background-repeat: no-repeat;
     background-size: auto 900px;
     background-position-x: center;
     background-position-y: bottom;
+    */
     /*height: 900px; */
-    margin-top: -20px;
+    /*margin-top: -20px;*/
     margin-bottom: auto;
     scroll-behavior: smooth;
     /* overflow-y: hidden; */
