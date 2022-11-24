@@ -86,13 +86,13 @@
     display: flex;
     flex-direction: column;
     /*border: 2px solid; */
-    width: 80%;
+    width: 90%;
 }
 
 .divFila h3 {
     text-align: left;
     font-family: 'arimo', sans-serif;
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 400;
 }
 
@@ -100,20 +100,36 @@
 /*estilos para componentes*/
 
 .divFila input {
-    padding-top: 5%;
+    padding-top: 2%;
     padding-bottom: 1%;
-    height: 10%;
+    height: 7%;
+    margin-top: -3%;
     border: none;
     border-bottom: 2px solid #C94615;
     font-size: 24px;
 }
 
 .divFila input:hover {
-    background-color: blueviolet;
+    background-color: #f36c3c;
+    border-radius: 5%;
 }
 
 .divFila input:focus {
     outline: none;
+}
+
+.subtitle {
+    font-family: 'arimo', sans-serif;
+    font-size: 24px;
+    margin: auto;
+    margin-top: 2%;
+    /*border: 2px solid; */
+    width: 90%;
+    margin-bottom: 4%;
+}
+
+.subtitle img {
+    margin-right: 5%;
 }
 
 @media (max-width: 600px) {
@@ -138,6 +154,8 @@
         border: transparent;
         color: white;
         font-size: 24px;
+        font-weight: bold;
+        font-family: 'Titillium';
         text-align: center;
     }
     .botonEstandar:hover {
@@ -171,6 +189,31 @@
         background-position-x: center;
         /*border: 2px solid; */
         background-image: url('/logoM.svg');
+    }
+    /*estilos registro*/
+    .footerNotMain {
+        margin-top: 10%;
+        display: flex;
+        text-align: left;
+        flex-direction: column;
+        align-items: center;
+        border-top: none;
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: -5%;
+    }
+    .footerNotMain p {
+        margin-bottom: -5%;
+        font-size: 13px;
+    }
+    .footerNotMain a {
+        font-size: 13px;
+        color: #616ee4;
+    }
+    .footerNotMain a:link {
+        font-size: 13px;
+        color: #616ee4;
     }
 }
 
