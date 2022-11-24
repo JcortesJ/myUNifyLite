@@ -24,7 +24,7 @@ const Home: NextPage = () => {
         <div className={styles.imagenLogo}></div>
         <section className={styles.Flex1}>
         <Link href={"/login"}><button className={styles.botonEstandar}>Login </button></Link>
-          <button className={styles.botonEstandar}>Registrate</button>
+        <Link href={"/registro"}>  <button className={styles.botonEstandar}>Registrate</button></Link>
         </section>
        
       </main>
