@@ -12,7 +12,7 @@ const Registro = () => {
     const [email, setEmail] = useState("");
     const [ig, setIg] = useState("No tiene");
 
-    const onSubmit = async (e: FormEvent) => {
+    const onSubmit =  (e: FormEvent) => {
         e.preventDefault()
 
 
