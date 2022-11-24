@@ -70,11 +70,13 @@ const Registro = () => {
                         <input name={'ig_user'} required={true} onChange={i => setIg((i.target as HTMLInputElement).value)} />
                     </div>
                     <footer className={styles.footerNotMain}>
-                        <p> <input type={'checkbox'} /> Acepto los términos y condiciones de uso de la aplicación. </p>  <br></br> <a className={styles.linkNegro} href={"/registro"}>Politica de tratamiento de datos</a>
+                        <p> <input type={'checkbox'} /> Acepto los términos y condiciones de uso de la aplicación. </p>  <br></br> <a className={styles.linkNegro} href={"../data/policy"}>
+                            Politica de tratamiento de datos</a>
 
                     </footer>
                     <section className={styles.Flex1}>
-                        <button className={styles.botonEstandar} type="submit" onClick={onSubmit}><Link href={"/registro"}>¡Iniciemos!</Link> </button>
+                        <button className={styles.botonEstandar} type="submit" onClick={onSubmit}>
+                            <Link href={"/login"}>¡Iniciemos!</Link> </button>
                     </section>
                 </form>
 
