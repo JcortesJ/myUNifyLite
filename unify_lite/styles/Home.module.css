@@ -82,6 +82,40 @@
     display: none;
 }
 
+.divFila {
+    display: flex;
+    flex-direction: column;
+    /*border: 2px solid; */
+    width: 80%;
+}
+
+.divFila h3 {
+    text-align: left;
+    font-family: 'arimo', sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+}
+
+
+/*estilos para componentes*/
+
+.divFila input {
+    padding-top: 5%;
+    padding-bottom: 1%;
+    height: 10%;
+    border: none;
+    border-bottom: 2px solid #C94615;
+    font-size: 24px;
+}
+
+.divFila input:hover {
+    background-color: blueviolet;
+}
+
+.divFila input:focus {
+    outline: none;
+}
+
 @media (max-width: 600px) {
     .grid {
         width: 100%;
