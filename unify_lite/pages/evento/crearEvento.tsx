@@ -5,7 +5,7 @@ import Link from 'next/link'
 import { FormEvent, useState } from 'react'
 import styles from '../../styles/Home.module.css'
 const CrearEvento = () => {
-
+   
     const [nombre, setNombre] = useState("");
     const [lugar, setLugar] = useState("");
     const [descripcion, setDes] = useState("");
@@ -18,13 +18,12 @@ const CrearEvento = () => {
         e.preventDefault()
 
 
-
         const eventoPrueba: object = {
             'nombreEvento':nombre,
             'lugar':lugar,
             'descripcion':descripcion,
             'hora':parseInt(hora),
-            'dia':dia,
+            'dia':dia.replaceAll('-','/'),
             'facultad':facultad
         }
 
