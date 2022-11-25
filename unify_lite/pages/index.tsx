@@ -8,25 +8,26 @@ const Home: NextPage = () => {
   return (
     <div className={styles.container}>
       <Head>
-        <title>MyUNifyLite</title>
+        <title>MyUnifyLite</title>
         <meta name="description" content="Social Media App" />
         <link rel="icon" href="/Frame.ico" />
       </Head>
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-         MyUNify Lite
+         MyUnify Lite
         </h1>
         <div className={styles.avisoAdvertencia}>
           <h1>Ups... esta página no está diseñada para computadores</h1>
           <h2>Por favor ingresa desde un celular</h2>
         </div>
         <div className={styles.imagenLogo}></div>
-        <section className={styles.Flex1}>
-        <Link href={"/login"}><button className={styles.botonEstandar}>Login </button></Link>
-          <button className={styles.botonEstandar}>Registrate</button>
-        </section>
-       
+
+
+        <Link href={"/login"}><button className='w-52'>Login </button></Link>
+          <button className='w-52'>Registrate</button>
+
+
       </main>
 
       <footer className={styles.footer}>
