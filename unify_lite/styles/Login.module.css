@@ -1,3 +1,18 @@
+.circulo{
+    background-color: #3540A5;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    padding: 9px;
+    border-radius: 100%;
+    font-size: 23px;
+}
+
+.circulo i {
+    color: white;
+}
+
 .container {
     background-color: white;
 }
@@ -9,7 +24,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-family: 'Titillium', sans-serif;
+    font-family: 'Titillium Web', sans-serif;
 }
 
 .avisoAdvertencia {
@@ -110,25 +125,6 @@
     .avisoAdvertencia {
         display: none;
     }
-    .botonEstandar {
-        display: block;
-        background-color: #3F4898;
-        width: 203px;
-        height: 52px;
-        left: 85px;
-        top: 347px;
-        margin: auto;
-        margin-top: 5%;
-        margin-bottom: 5%;
-        border-radius: 16px;
-        border: transparent;
-        color: white;
-        font-size: 24px;
-        text-align: center;
-    }
-    .botonEstandar:hover {
-        background-color: #616ee4;
-    }
     .Flex1 {
         /* border: 2px solid; 
          */
@@ -169,6 +165,77 @@
         /*border: 2px solid; */
         background-image: url('/logo.svg');
     }
+
+}
+
+.homeHeader{
+    position: fixed;
+    top: 0px;
+    background-color: none;
+    width: 100vw;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+
+
+
+.divEvento{
+    position:static;
+    display: flex;
+    flex-direction: row;
+    /* 
+    
+    align-items: center;
+    justify-content: center; */
+
+    height: 132px;
+    width: 100vw;
+    background-color: none;
+    border-bottom: 1px solid #C9420C;
+}
+
+.divEvento img{
+    width: 100px;
+    height: 100px;
+    border-radius: 8px;
+}
+
+.divEventoImagen{
+    background-color: none;
+    width: 132px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+
+}
+
+.divEventoInfo{
+    margin-top: 16px;
+    height: 100px;
+    width: calc(100% - 145px);
+    margin-right: 0px;
+    display: flex;
+    background-color: none;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+}
+
+.contenidoHome{
+    background-color: none;
+    width: 100vw;
+    height: calc(100vh - 100px);
+    margin-top: 42px;
+    margin-bottom: 50px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+
     /*estilos para componentes*/
     .divFila {
         display: flex;
@@ -197,4 +264,5 @@
     .divFila input:focus {
         outline: none;
     }
+
 }

@@ -1,3 +1,5 @@
+
+
 .container {
     /*background-image: url('/inicio_login.gif');*/
     /*
@@ -76,10 +78,6 @@
 .logo {
     height: 1em;
     margin-left: 0.5rem;
-}
-
-.botonEstandar {
-    display: none;
 }
 
 .divFila {
@@ -163,6 +161,7 @@
     margin-right: 5%;
 }
 
+
 @media (max-width: 600px) {
     .grid {
         width: 100%;
@@ -171,6 +170,7 @@
     .avisoAdvertencia {
         display: none;
     }
+
     .botonEstandar {
         display: block;
         background-color: #3F4898;
@@ -192,6 +192,7 @@
     .botonEstandar:hover {
         background-color: #616ee4;
     }
+ 
     .Flex1 {
         /* border: 2px solid; 
          */
@@ -295,3 +296,4 @@
 }
 
 */
+

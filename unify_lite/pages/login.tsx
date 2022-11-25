@@ -4,6 +4,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import InputDef from '../components/inputBonito'
 import styles from '../styles/Login.module.css'
+
 const Login = () => {
   return (
     <div className={styles.container}>
@@ -21,6 +22,7 @@ const Login = () => {
           <h1>Ups... esta página no está diseñada para computadores</h1>
           <h2>Por favor ingresa desde un celular</h2>
         </div>
+
         <div className={styles.divFila}>
           <h3>Usuario</h3>
           <input />
@@ -32,6 +34,7 @@ const Login = () => {
         <section className={styles.Flex1}>
           <button className={styles.botonEstandar}><Link href={"/registro"}>Login</Link> </button>
         </section>
+
 
       </main>
 
