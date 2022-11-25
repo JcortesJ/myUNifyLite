@@ -16,17 +16,26 @@ const Login = () => {
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-         MyUnify
+          MyUNify
         </h1>
         <div className={styles.avisoAdvertencia}>
           <h1>Ups... esta página no está diseñada para computadores</h1>
           <h2>Por favor ingresa desde un celular</h2>
         </div>
-        <InputDef {...["Usuario"]}></InputDef>
-        <InputDef {...["Contraseña"]}></InputDef>
 
-        <Link href={"/home"}><button>Login</button></Link> 
-       
+        <div className={styles.divFila}>
+          <h3>Usuario</h3>
+          <input />
+        </div>
+        <div className={styles.divFila}>
+          <h3>Contraseña</h3>
+          <input />
+        </div>
+        <section className={styles.Flex1}>
+          <button className={styles.botonEstandar}><Link href={"/registro"}>Login</Link> </button>
+        </section>
+
+
       </main>
 
       <footer className={styles.footer}>

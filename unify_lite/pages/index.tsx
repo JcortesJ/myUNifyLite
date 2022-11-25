@@ -23,8 +23,10 @@ const Home: NextPage = () => {
         </div>
         <div className={styles.imagenLogo}></div>
 
+
         <Link href={"/login"}><button className='w-52'>Login </button></Link>
           <button className='w-52'>Registrate</button>
+
 
       </main>
 

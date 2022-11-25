@@ -1,13 +1,15 @@
 @font-face {
-    font-family: 'Titillium Web';
-    src: url("/styles/TitilliumWeb-Regular.ttf");
+
+    font-family: 'Titillium';
+    src: url("../public/TitilliumWeb-Regular.ttf");
+
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'arimo';
-    src: url("/styles/Arimo-Italic-VariableFont_wght.ttf");
+    src: url("../public/Arimo-Regular.ttf");
     font-weight: normal;
     font-style: normal;
 }
@@ -18,7 +20,8 @@
 
 html,
 body {
-    font-family: 'Titillium Web','Arimo' ,sans-serif;
+
+    font-family: 'Titillium', sans-serif;
     margin-left: auto;
     /*es cuestion de margin-left para borrar las lineas*/
     width: 100%;
@@ -27,6 +30,7 @@ body {
     background-color: white;
     scroll-behavior: smooth;
 }
+
 
 button {
     display: block;
@@ -55,21 +59,26 @@ a {
     color: white;
 }
 
+
 a:link {
     text-decoration: none;
+    color: white;
 }
 
 a:visited {
     text-decoration: none;
+    color: white;
 }
 
 a:active {
     text-decoration: none;
+    color: white;
 }
 
 a:hover {
     text-decoration: none;
 }
+
 
 input{
     height: 56px;
@@ -141,6 +150,14 @@ i{
 .cajaBusqueda:focus {
     background-color: #3540a51b;
     outline: none;
+
+form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    align-items: center;
+
 }
 
 @media (max-width: 600px) {

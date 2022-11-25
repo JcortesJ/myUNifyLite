@@ -71,10 +71,12 @@
 .title {
     text-align: center;
     margin: auto;
+    font-family: 'Titillium', sans-serif;
     padding: 2%;
     padding-top: 10%;
     padding-bottom: 10%;
     color: #3F4898;
+    font-size: 80px;
 }
 
 .logo {
@@ -95,16 +97,19 @@
 .linkNegro:link {
     text-decoration: underline;
     text-decoration-color: black;
+    color: black;
 }
 
 .linkNegro:visited {
     text-decoration: underline;
     text-decoration-color: black;
+    color: black;
 }
 
 .linkNegro:active {
     text-decoration: underline;
     text-decoration-color: black;
+    color: black;
 }
 
 .linkNegro:hover {
@@ -139,14 +144,14 @@
         border-top: none;
     }
     .footer p {
-        margin-bottom: -2%;
+        margin-bottom: -5%;
         font-size: 24px;
     }
     .footer a {
         font-size: 24px;
     }
     .title {
-        font-family: 'arimo', sans-serif;
+        font-family: 'Titillium', sans-serif;
     }
     .imagenLogo {
         padding: 2%;
@@ -160,6 +165,7 @@
         /*border: 2px solid; */
         background-image: url('/logo.svg');
     }
+
 }
 
 .homeHeader{
@@ -229,4 +235,34 @@
     margin-bottom: 50px;
     overflow-x: hidden;
     overflow-y: scroll;
+
+    /*estilos para componentes*/
+    .divFila {
+        display: flex;
+        flex-direction: column;
+        /*border: 2px solid; */
+        width: 80%;
+    }
+    .divFila h3 {
+        text-align: left;
+        font-family: 'arimo', sans-serif;
+        font-size: 24px;
+        font-weight: 400;
+    }
+    .divFila input {
+        padding-top: 2%;
+        padding-bottom: 1%;
+        height: 7%;
+        border: none;
+        border-bottom: 2px solid #C94615;
+        font-size: 24px;
+    }
+    .divFila input:hover {
+        background-color: #f36c3c;
+        border-radius: 5%;
+    }
+    .divFila input:focus {
+        outline: none;
+    }
+
 }
