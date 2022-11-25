@@ -1,4 +1,4 @@
-.circulo{
+.circulo {
     background-color: #3540A5;
     display: flex;
     justify-content: center;
@@ -166,10 +166,9 @@
         /*border: 2px solid; */
         background-image: url('/logo.svg');
     }
-
 }
 
-.homeHeader{
+.homeHeader {
     position: fixed;
     top: 0px;
     background-color: none;
@@ -181,31 +180,27 @@
     justify-content: space-evenly;
 }
 
-
-
-
-.divEvento{
-    position:static;
+.divEvento {
+    position: static;
     display: flex;
     flex-direction: row;
     /* 
     
     align-items: center;
     justify-content: center; */
-
     height: 132px;
     width: 100vw;
     background-color: none;
     border-bottom: 1px solid #C9420C;
 }
 
-.divEvento img{
+.divEvento img {
     width: 100px;
     height: 100px;
     border-radius: 8px;
 }
 
-.divEventoImagen{
+.divEventoImagen {
     background-color: none;
     width: 132px;
     height: 100%;
@@ -213,10 +208,9 @@
     align-items: center;
     justify-content: center;
     align-content: center;
-
 }
 
-.divEventoInfo{
+.divEventoInfo {
     margin-top: 16px;
     height: 100px;
     width: calc(100% - 145px);
@@ -228,7 +222,7 @@
     align-content: center;
 }
 
-.contenidoHome{
+.contenidoHome {
     background-color: none;
     width: 100vw;
     height: calc(100vh - 100px);
@@ -236,34 +230,39 @@
     margin-bottom: 50px;
     overflow-x: hidden;
     overflow-y: scroll;
+}
 
-    /*estilos para componentes*/
-    .divFila {
-        display: flex;
-        flex-direction: column;
-        /*border: 2px solid; */
-        width: 80%;
-    }
-    .divFila h3 {
-        text-align: left;
-        font-family: 'arimo', sans-serif;
-        font-size: 24px;
-        font-weight: 400;
-    }
-    .divFila input {
-        padding-top: 2%;
-        padding-bottom: 1%;
-        height: 7%;
-        border: none;
-        border-bottom: 2px solid #C94615;
-        font-size: 24px;
-    }
-    .divFila input:hover {
-        background-color: #f36c3c;
-        border-radius: 5%;
-    }
-    .divFila input:focus {
-        outline: none;
-    }
 
+/*estilos para componentes*/
+
+.divFila {
+    display: flex;
+    flex-direction: column;
+    /*border: 2px solid; */
+    width: 80%;
+}
+
+.divFila h3 {
+    text-align: left;
+    font-family: 'arimo', sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.divFila input {
+    padding-top: 2%;
+    padding-bottom: 1%;
+    height: 7%;
+    border: none;
+    border-bottom: 2px solid #C94615;
+    font-size: 24px;
+}
+
+.divFila input:hover {
+    /*background-color: #f36c3c; */
+    border-radius: 5%;
+}
+
+.divFila input:focus {
+    outline: none;
 }

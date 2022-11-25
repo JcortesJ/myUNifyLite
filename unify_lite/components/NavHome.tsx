@@ -10,7 +10,9 @@ const NavHome = () => {
 
   return (
     <div className={styles.homeHeader}>
-        {/* <div className='lineaNegra h-full font-titillium text-xl w-2/5 flex content-center items-center justify-center'>
+        {/* 
+        navbar para seguidos | para ti
+        <div className='lineaNegra h-full font-titillium text-xl w-2/5 flex content-center items-center justify-center'>
           Para tí
         </div>
         <div className='lineaNegra h-full font-titillium text-xl w-2/5 flex content-center items-center justify-center '>
