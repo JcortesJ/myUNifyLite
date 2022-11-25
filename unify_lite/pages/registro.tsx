@@ -46,7 +46,7 @@ const Registro = () => {
 
             <main className={styles.main}>
                 <h3 className={styles.subtitle}>
-                    <a href={'/login'}><img width={22} height={22} src={"/back_arrow.svg"} /></a>Registro
+                    <a href={'/login'}><i className={"fa-solid fa-music text-xl lineaNegra"}> </i></a>Registro
                 </h3>
                 <div className={styles.avisoAdvertencia}>
                     <h1>Ups... esta página no está diseñada para computadores</h1>
