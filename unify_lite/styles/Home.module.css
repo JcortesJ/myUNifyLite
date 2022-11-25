@@ -1,5 +1,3 @@
-
-
 .container {
     /*background-image: url('/inicio_login.gif');*/
     /*
@@ -161,7 +159,6 @@
     margin-right: 5%;
 }
 
-
 @media (max-width: 600px) {
     .grid {
         width: 100%;
@@ -170,7 +167,6 @@
     .avisoAdvertencia {
         display: none;
     }
-
     .botonEstandar {
         display: block;
         background-color: #3F4898;
@@ -192,7 +188,6 @@
     .botonEstandar:hover {
         background-color: #616ee4;
     }
- 
     .Flex1 {
         /* border: 2px solid; 
          */
@@ -278,6 +273,13 @@
         top: 71.68%;
         bottom: 63.12%;
     }
+    .cajitaScroll {
+        width: 100vw;
+        height: 100vh;
+        overflow-y: scroll;
+        overflow-x: auto;
+        /*border: 2px solid; */
+    }
 }
 
 
@@ -296,4 +298,3 @@
 }
 
 */
-
