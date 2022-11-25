@@ -36,8 +36,8 @@ button {
     display: block;
     background-color: #3F4898;
     width: fit-content;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 25px;
+    padding-right: 25px;
     height: 52px;
     left: 85px;
     top: 347px;
@@ -150,6 +150,7 @@ i{
 .cajaBusqueda:focus {
     background-color: #3540a51b;
     outline: none;
+}
 
 form {
     width: 100%;

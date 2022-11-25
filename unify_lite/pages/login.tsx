@@ -16,7 +16,7 @@ const Login = () => {
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          MyUNify
+          MyUnify
         </h1>
         <div className={styles.avisoAdvertencia}>
           <h1>Ups... esta página no está diseñada para computadores</h1>
@@ -31,11 +31,7 @@ const Login = () => {
           <h3>Contraseña</h3>
           <input />
         </div>
-        <section className={styles.Flex1}>
-          <button className={styles.botonEstandar}><Link href={"/registro"}>Login</Link> </button>
-        </section>
-
-
+        <button><Link href={"/registro"}>Login</Link> </button>
       </main>
 
       <footer className={styles.footer}>
