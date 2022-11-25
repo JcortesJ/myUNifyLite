@@ -18,7 +18,7 @@ const NavHome = () => {
         <div className='lineaNegra h-full font-titillium text-xl w-2/5 flex content-center items-center justify-center '>
           Seguidos
         </div> */}
-        <div className='h-full w-4/5 flex content-center items-center justify-center'>
+        <div className='h-full w-4/5 flex content-center items-center justify-center font-titillium'>
         <input type="text" id="search" name="search" placeholder='Buscar' className='cajaBusqueda '/>
         </div>
         <div className='h-full w-1/5 flex content-center items-center justify-center '>
