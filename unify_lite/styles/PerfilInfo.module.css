@@ -1,0 +1,16 @@
+.infoDiv{
+    display: inline-block;
+    text-align: center;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.number{
+    color: #3F4898;
+    font-size: 200%;
+    margin-bottom: -10%;
+}
+
+.sectionText{
+    font-size: 120%;
+}

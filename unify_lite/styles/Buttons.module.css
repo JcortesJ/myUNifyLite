@@ -1,0 +1,41 @@
+.buttonTrue{
+    border-radius: 8px;
+    background-color: #575EA5;
+    color: white;
+    border: transparent;
+    width: 90%;
+    height: 20%;
+    padding-top: 5%;
+    padding-left: 5%;
+    padding-bottom: 5%;
+    padding-right: 5%;
+    margin-left: -5%;
+    margin-top: 15%;
+    margin-bottom: 8%;
+}
+
+.buttonTrue:hover{
+    cursor: pointer;
+}
+
+.buttonFalse{
+    border-radius: 8px;
+    background-color: #EFC6B6;
+    color: black;
+    border: transparent;
+    width: 90%;
+    height: 20%;
+    padding-top: 5%;
+    padding-left: 5%;
+    padding-bottom: 5%;
+    padding-right: 5%;
+    margin-left: -5%;
+    margin-top: 15%;
+    margin-bottom: 20%;
+}
+
+
+.buttonFalse:hover{
+    cursor: pointer;
+}
+

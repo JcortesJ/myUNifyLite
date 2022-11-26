@@ -1,0 +1,43 @@
+.divNotificacion{
+    border-top: 2px solid #C94615;
+    border-bottom: 2px solid #C94615;
+    width: 100%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    padding-left: 10%;
+    display: flex;
+}
+
+.divNotificacion > div{
+    margin-top: -3%;
+    padding-left: 10%;
+}
+
+.divNotificacion h2{
+
+    font-weight: bold;
+    color: #575EA5;
+}
+
+.divNotificacion h4{
+    font-family: "Arimo";
+    font-weight: normal;
+    margin-top: -5%;
+}
+
+.divEtiqueta{
+    display: flex;
+    position: relative;
+}
+
+.divParcheAceptar{
+    width: 20%;
+    background-color: black;
+
+}
+
+.divParcheAceptar button{
+
+    bottom: 100%;
+}
+
