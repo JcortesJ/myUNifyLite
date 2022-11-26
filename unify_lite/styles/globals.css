@@ -52,22 +52,22 @@ button:hover {
 }
 
 a {
-    color: white;
+    color: black;
 }
 
 a:link {
     text-decoration: none;
-    color: white;
+    color: black;
 }
 
 a:visited {
     text-decoration: none;
-    color: white;
+    color: black;
 }
 
 a:active {
     text-decoration: none;
-    color: white;
+    color: black;
 }
 
 a:hover {
