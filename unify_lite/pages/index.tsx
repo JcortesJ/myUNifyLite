@@ -25,7 +25,7 @@ const Home: NextPage = () => {
 
 
         <Link href={"/login"}><button className='w-52'>Login </button></Link>
-          <button className='w-52'>Registrate</button>
+        <Link href={"/registro"}><button className='w-52'>Registrate</button></Link>  
 
 
       </main>

@@ -19,9 +19,10 @@ const NotAmigos = () => {
       </Head>
 
       <main className={styles.main}>
-      <NavNotif></NavNotif>
+      
        
         <div className={styles.cajitaScroll}>
+        <NavNotif></NavNotif>
           <DivAmigo{...['1','2','Usuario 1']}></DivAmigo>
           <DivAmigo{...['5','0','Usuario 2']}></DivAmigo>
           <DivAmigo{...['6','7','Usuario 3']}></DivAmigo>
