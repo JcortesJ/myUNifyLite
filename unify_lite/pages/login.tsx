@@ -2,10 +2,30 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
+import { FormEvent, useState } from 'react'
 import InputDef from '../components/inputBonito'
 import styles from '../styles/Login.module.css'
 
 const Login = () => {
+  const [usuario,setUsuario] =useState("");
+  const[clave,setClave] = useState("");
+
+
+  const onSubmit = (e: FormEvent) => {
+    e.preventDefault()
+
+    /*este codigo recibe los datos y los convierte a un objeto */
+
+    const objetoPrueba: object = {
+        'usuario': usuario,
+        'clave': clave,
+    }
+
+    console.log(objetoPrueba)
+    // saveFormData(objetoPrueba);
+    //primero hay que entender como funciona esto
+}
+
   return (
     <div className={styles.container}>
       <Head>
@@ -25,13 +45,13 @@ const Login = () => {
 
         <div className={styles.divFila}>
           <h3>Usuario</h3>
-          <input />
+          <input onChange={i => setUsuario((i.target as HTMLInputElement).value)}/>
         </div>
         <div className={styles.divFila}>
           <h3>Contraseña</h3>
-          <input />
+          <input type={'password'} onChange={i => setClave((i.target as HTMLInputElement).value)}/>
         </div>
-        <button><Link href={"/home/home"}>Login</Link> </button>
+        <button className={styles.botonLogin}  onClick={onSubmit}><Link href={"/login"}>Login</Link> </button>
       </main>
 
       <footer className={styles.footer}>
