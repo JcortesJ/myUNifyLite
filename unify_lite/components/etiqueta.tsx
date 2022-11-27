@@ -7,7 +7,7 @@ import styles from '../styles/Etiquetas.module.css'
 const Etiqueta = (props:string[]) => {
   return (
     <div className= {styles.EtiquetaStyle}> 
-      <h1>{props[0]}</h1>
+      {props[0]}
     </div>
   )
 }

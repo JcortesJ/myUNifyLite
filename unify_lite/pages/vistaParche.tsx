@@ -7,7 +7,7 @@ import parche from '../styles/VistaParches.module.css'
 import Info from '../components/infoPerfil'
 import Etiqueta from '../components/etiqueta'
 
-const VistaParche: NextPage = () => {
+const VistaParche = () => {
   return (
     <div className={styles.container}>
       <Head>
@@ -15,14 +15,12 @@ const VistaParche: NextPage = () => {
         <meta name="description" content="Social Media App" />
         <link rel="icon" href="/Frame.ico" />
       </Head>
-      <header className = {parche.headerPar}>
-          
-          <h1>Parche</h1>
-         
+      <header className = {parche.headerPar}>       
+          Parche
       </header>
-      <body>
+      <div>
         <div className={parche.divFoto}>
-            <h1>F</h1>
+  
         </div>
            
         <div className={parche.basicDiv}>
@@ -35,19 +33,14 @@ const VistaParche: NextPage = () => {
             <Info{...["11", 'Tus amigos en el parche']}></Info>
         </div>
         <div className={parche.infoDiv}>
-            <Etiqueta{...["Etiqueta 1"]}> </Etiqueta>
-            <Etiqueta{...["Etiqueta 2"]}> </Etiqueta>
-            <Etiqueta{...["Etiqueta 3"]}> </Etiqueta>
-            <Etiqueta{...["Etiqueta 4"]}> </Etiqueta>
+          <Etiqueta{...["Etiqueta 1"]}> </Etiqueta>
+          <Etiqueta{...["Etiqueta 2"]}> </Etiqueta>
+          <Etiqueta{...["Etiqueta 3"]}> </Etiqueta>
+          <Etiqueta{...["Etiqueta 4"]}> </Etiqueta>
 
         </div>
-      </body>
-      
-     
-
-      <footer className={styles.footer}>
-      <img src='./Frame.ico' width={50} height={50}></img> <p>MyUNify, un proyecto de <strong>MyUNify</strong></p>
-      </footer>
+      </div>
+         
     </div>
   )
 }

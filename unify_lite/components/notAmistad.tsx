@@ -12,7 +12,7 @@ import buttonStyles from '../styles/Buttons.module.css'
 const NotAmistad = (props:string[]) => {
   return (
    <div className={styles.divNotificacion}>
-        <img></img> imagen xd 
+        <img className={styles.img} src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyvdzUagUnP7jVI0o7fOh8siF3pgTC6lx1Rw&usqp=CAU'></img> 
         <div className={styles.divElements}>
             <h2>{props[0]}</h2> 
             <h4>{props[1]}</h4>
