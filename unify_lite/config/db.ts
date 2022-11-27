@@ -5,8 +5,7 @@ export async function kuery(query:any, values = [] ) {
     host:'127.0.0.1',
     database:'myunify',
     user:'root',
-    
-    port:3001,
+    port:3306,
     password:'toor'
   });
   try {
