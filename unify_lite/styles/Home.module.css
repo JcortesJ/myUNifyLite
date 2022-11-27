@@ -83,13 +83,17 @@
     flex-direction: column;
     /*border: 2px solid; */
     width: 90%;
+    margin-top: 5%;
 }
 
 .divFila h3 {
     text-align: left;
     font-family: 'arimo', sans-serif;
     font-size: 20px;
+    /*border: 2px solid; */
     font-weight: 400;
+    display: flex;
+    flex-direction: column;
 }
 
 
@@ -99,10 +103,11 @@
     padding-top: 2%;
     padding-bottom: 1%;
     height: 7%;
-    margin-top: -3%;
+    margin-top: 2%;
     border: none;
     border-bottom: 2px solid #C94615;
     font-size: 20px;
+    /*border: 2px solid; */
     font-family: 'arimo', sans-serif;
     margin-bottom: 2%;
 }
@@ -111,7 +116,7 @@
     padding-top: 2%;
     padding-bottom: 20%;
     height: 50%;
-    margin-top: -3%;
+    margin-top: 2%;
     margin-bottom: 2%;
     border: none;
     border: 2px solid #C94615;
@@ -143,6 +148,8 @@
     background: rgba(201, 66, 12, 0.12);
     border-radius: 3px;
     margin-top: 2%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .subtitle {
@@ -151,11 +158,14 @@
     margin: auto;
     margin-top: 2%;
     /*border: 2px solid; */
-    width: 90%;
+    width: 92%;
     margin-bottom: 4%;
+    display: flex;
+    text-align: right;
 }
 
-.subtitle img {
+.subtitle>a {
+    margin-top: 2%;
     margin-right: 5%;
 }
 
@@ -170,7 +180,7 @@
     .botonEstandar {
         display: block;
         background-color: #3F4898;
-        width: 203px;
+        width: fit-content;
         height: 52px;
         left: 85px;
         top: 347px;
@@ -189,8 +199,7 @@
         background-color: #616ee4;
     }
     .Flex1 {
-        /* border: 2px solid; 
-         */
+        /*border: 2px solid; */
         margin-top: 5%;
         display: flex;
         flex-direction: column;
@@ -211,8 +220,8 @@
         padding-top: 10%;
     }
     .Flex2>.botonEstandar {
-        margin-left: 5%;
-        margin-right: 5%;
+        margin-left: 9%;
+        margin-right: 1%;
     }
     .footer {
         display: none;
@@ -236,18 +245,29 @@
     .footerNotMain {
         margin-top: 10%;
         display: flex;
+        /*border: 2px solid; */
         text-align: left;
         flex-direction: column;
         align-items: center;
         border-top: none;
-        width: 80%;
+        width: 90%;
         margin-left: auto;
         margin-right: auto;
         margin-bottom: -5%;
     }
     .footerNotMain p {
-        margin-bottom: -5%;
+        margin-bottom: -3%;
+        padding-top: 2%;
+        /*border: 2px solid; */
         font-size: 13px;
+        display: flex;
+        margin-left: 5%;
+        text-align: left;
+    }
+    .footerNotMain p>input {
+        margin-top: -5.5%;
+        margin-right: 2%;
+        border: 2px solid;
     }
     .footerNotMain a {
         font-size: 13px;
@@ -265,6 +285,8 @@
         border: 2px solid #3F4898;
         border-radius: 50%;
         display: inline-block;
+        margin-left: 30%;
+        position: relative;
     }
     .circuloUsuario img {
         position: relative;
