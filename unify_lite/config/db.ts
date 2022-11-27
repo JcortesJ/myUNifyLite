@@ -6,7 +6,7 @@ export async function kuery(query:any, values = [] ) {
     database:'myunify',
     user:'root',
     port:3306,
-    password:''
+    password:'toor'
   });
   try {
     const [results] = await dbconnection.execute(query, values);
