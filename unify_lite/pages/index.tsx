@@ -6,27 +6,7 @@ import { useEffect, useState } from 'react'
 import styles from '../styles/Home.module.css'
 
 const Home: NextPage = () => {
-  const [dataResponse,setdataResponse] = useState<any[]>([]);
-  
-  async function getPageData(){
-    const apiUrlEndpoint = './api/hello';
-    const response = await fetch(apiUrlEndpoint)
-    const res = await response.json();
-    setdataResponse(res.reportes);
-}
-
-useEffect(
-  ()=>{
-      getPageData()
-  },[]
-);
-
-async function actualizarPagina(data:any){
-  await getPageData();
-  setTimeout(() => {
-     console.log(dataResponse);
-  },200);
-}
+ 
 
   return (
     <div className={styles.container}>
@@ -49,7 +29,7 @@ async function actualizarPagina(data:any){
 
         <Link href={"/login"}><button className='w-52'>Login </button></Link>
         <Link href={"/registro"}><button className='w-52'>Registrate</button></Link>  
-        <button onClick={actualizarPagina}>click</button>
+       
 
       </main>
 
@@ -61,7 +41,5 @@ async function actualizarPagina(data:any){
 }
 
 export default Home
-function actualizarDatos(data: any) {
-  throw new Error('Function not implemented.')
-}
+
 
