@@ -1,6 +1,7 @@
 import mysql from "mysql2/promise";
 
-export async function kuery(query: any, values = []) {
+
+export async function kuery(query: any, values:any[] = []) {
   const dbconnection = await mysql.createConnection({
     host: 'localhost',
     database: 'myunify',
@@ -19,6 +20,4 @@ export async function kuery(query: any, values = []) {
 
   }
 }
-
-
 
