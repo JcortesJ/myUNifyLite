@@ -81,7 +81,7 @@ const NotAmigos = () => {
                 Parches
               </Link>
             </div>
-            <img src={"/lupita.svg"} onClick={actualizarPagina} ></img>
+            <button type={'submit'}><img src={"/lupita.svg"} onClick={actualizarPagina}></img></button>
           </nav>
 
           {/**trae los amigos y los muestra en un div */}

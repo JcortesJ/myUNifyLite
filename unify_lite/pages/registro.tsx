@@ -35,15 +35,16 @@ async function getPageData() {
     console.log(insertarPrueba);
     const apiUrlEndpoint = './api/insertarUsuario/'+insertarPrueba;
     const response = await fetch(apiUrlEndpoint)
-   // const res = await response.json();
+    const res = await response.json();
     //setdataAmigos(res.datos);
-    //console.log(res.datos);
+    alert(res.datos);
   } 
 
 
 
   async function actualizarPagina() {
     await getPageData();
+    alert('datos creados')
   }
       
 
@@ -90,7 +91,7 @@ async function getPageData() {
 
                         </footer>
                         <section className={styles.Flex1}>
-                            <button className={styles.botonEstandar} type="submit" onClick={actualizarPagina}>
+                            <button className={styles.botonEstandar}  onClick={actualizarPagina}>
                                 ¡Iniciemos! </button>
 
                         </section>
