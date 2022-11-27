@@ -2,7 +2,7 @@ import mysql from "mysql2/promise";
 
 export async function kuery(query:any, values = [] ) {
   const dbconnection = await mysql.createConnection({
-    host:'127.0.0.1',
+    host:'localhost',
     database:'myunify',
     user:'root',
     port:3306,
