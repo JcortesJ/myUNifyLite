@@ -31,7 +31,7 @@ const Login = () => {
           <h3>Contraseña</h3>
           <input />
         </div>
-        <button><Link href={"/registro"}>Login</Link> </button>
+        <button><Link href={"/home/home"}>Login</Link> </button>
       </main>
 
       <footer className={styles.footer}>

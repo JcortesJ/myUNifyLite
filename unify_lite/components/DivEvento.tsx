@@ -9,6 +9,7 @@ const DivEvento = (  ) => {
     /* Inicializamos la pestaña como falsa porque estará cerrada y cambiara a lo largo del programa */
 
   return (
+    <Link href='/evento/eventoInfo'>
     <div className={styles.divEvento}>
       <div className={styles.divEventoImagen}>
         <img  alt="Dinosaurio" src="https://th.bing.com/th/id/R.089f1e05b4d8ce916f5c7dee8bea4505?rik=KFo3hG6nVGp1Ww&riu=http%3a%2f%2fwww.home2b.nl%2fhome2b-secret-history%2fsecret-history-dinosaurs_files%2fimage014.jpg&ehk=6s4cp%2bosonOv6DL2zl7dgNh%2foBT6FGCVgo3Dt5QWO4%3d&risl=&pid=ImgRaw&r=0&sres=1&sresct=1"></img> 
@@ -36,6 +37,7 @@ const DivEvento = (  ) => {
       </div>
       
     </div>
+    </Link>
   );
 }
 
