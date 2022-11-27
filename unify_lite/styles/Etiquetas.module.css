@@ -1,0 +1,23 @@
+.EtiquetaStyle{
+    position: relative;
+    border-radius: 8px;
+    background-color: #C9420C;
+    border: transparent;
+    color: white;
+    width: fit-content;
+    height: 1vh;
+    text-align: center;
+    padding-top: 2%;
+    padding-left: 5%;
+    padding-bottom: 5%;
+    padding-right: 5%;
+    
+    margin-right: 5%;
+   
+}
+
+.EtiquetaStyle h1{
+    position: relative;
+    
+    
+}

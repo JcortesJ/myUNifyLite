@@ -1,0 +1,63 @@
+.divNotificacion{
+    border-top: 2px solid #C94615;
+    border-bottom: 2px solid #C94615;
+    width: 100%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    padding-left: 10%;
+    display: flex;
+    background-color: aquamarine;
+}
+
+.divNotificacion > div{
+    margin-top: -3%;
+    padding-left: 10%;
+}
+
+.divNotificacion h2{
+
+    font-weight: bold;
+    color: #575EA5;
+}
+
+.divNotificacion h4{
+    font-family: "Arimo";
+    font-weight: normal;
+    margin-top: -5%;
+}
+
+.divEtiqueta{
+    background-color: green;
+    display: flex;
+    position: relative;
+}
+
+.divParcheAceptar{
+    width: 20%;
+    background-color: black;
+
+}
+
+.divParcheAceptar button{
+
+    bottom: 100%;
+}
+
+.img{
+    background-color: beige;
+    margin: auto;
+    border-radius: 60px;
+    width: 20%;
+}
+
+.divElements1{
+    margin-top: 16px;
+    height: 100px;
+    width: calc(100% - 145px);
+    margin-right: 0px;
+    display: flex;
+    background-color: none;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+}
