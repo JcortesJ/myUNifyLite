@@ -5,8 +5,12 @@ import Link from 'next/link'
 import { FormEvent, useState } from 'react'
 import InputDef from '../components/inputBonito'
 import styles from '../styles/Login.module.css'
+import { useUser } from '../contexts/user'
+import { useAuth } from '../contexts/auth'
 
 const Login = () => {
+  const { user, setUser } = useUser();
+  const { auth, setAuth } = useAuth();
   const [usuario,setUsuario] =useState("");
   const[clave,setClave] = useState("");
 
