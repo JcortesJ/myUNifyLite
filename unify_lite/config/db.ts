@@ -14,8 +14,8 @@ export async function kuery(query: any, values:any[] = []) {
     //console.log(results);
     dbconnection.end();
     return results;
-  } catch (error: any) {
-    console.log('hola')
+  } catch (error:any) {
+    console.log('error')
     throw Error(error.message);
 
   }

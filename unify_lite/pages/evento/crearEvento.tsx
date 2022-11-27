@@ -40,6 +40,7 @@ const CrearEvento = () => {
             method: "POST"
         })
     }
+    
     return (
         <div className={styles.container}>
             <Head>
