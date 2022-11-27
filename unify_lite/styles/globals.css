@@ -1,6 +1,6 @@
 @font-face {
-    font-family: 'TitilliumWeb';
-    src: url("/styles/TitilliumWeb-Regular.ttf");
+    font-family: 'Titillium';
+    src: url("../public/TitilliumWeb-Regular.ttf");
     font-weight: normal;
     font-style: normal;
 }
@@ -9,20 +9,48 @@
 
 @font-face {
     font-family: 'arimo';
-    src: url("/styles/Arimo-Italic-VariableFont_wght.ttf");
+    src: url("../public/Arimo-Regular.ttf");
     font-weight: normal;
     font-style: normal;
 }
 
+@import url("https://kit.fontawesome.com/a1d72236eb.js");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 html,
 body {
-    font-family: 'TitilliumWeb', sans-serif;
+    font-family: 'Titillium', sans-serif;
     margin-left: auto;
     /*es cuestion de margin-left para borrar las lineas*/
     width: 100%;
     overflow-x: clip;
+    overflow-y: clip;
     background-color: white;
     scroll-behavior: smooth;
+}
+
+button {
+    display: block;
+    background-color: #3F4898;
+    width: fit-content;
+    padding-left: 25px;
+    padding-right: 25px;
+    height: 52px;
+    left: 85px;
+    top: 347px;
+    margin: auto;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    border-radius: 16px;
+    border: transparent;
+    color: white;
+    font-size: 24px;
+    text-align: center;
+}
+
+button:hover {
+    background-color: #616ee4;
 }
 
 a {
@@ -31,18 +59,130 @@ a {
 
 a:link {
     text-decoration: none;
+    color: white;
 }
 
 a:visited {
     text-decoration: none;
+    color: white;
 }
 
 a:active {
     text-decoration: none;
+    color: white;
 }
 
 a:hover {
     text-decoration: none;
+}
+
+input {
+    height: 56px;
+    padding-left: 10px;
+    border: none;
+    border-bottom: 2px solid #C94615;
+    border-radius: 5px;
+    font-size: 24px;
+}
+
+input:focus {
+    background-color: #c9451527;
+    outline: none;
+}
+
+nav {
+    position: fixed;
+    bottom: 0px;
+    background-color: none;
+    height: 50px;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    border: none;
+    border-top: 2px solid #3F489863;
+    box-shadow: 0px 0px 4px 1px #00000040;
+}
+
+nav i {
+    font-size: 23px;
+    color: #404040;
+}
+
+nav i:hover {
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+    color: #3540A5;
+}
+
+i {
+    color: black;
+    font-size: large;
+    width: 20px;
+    height: 20px;
+}
+
+.lineaNegra {
+    border-right: 1px solid #000000;
+}
+
+.lineaNegra:hover {
+    border-bottom: 2px solid #C94615;
+}
+
+.lineaSeleccionado{
+    border-bottom: 2px solid #C94615;
+}
+
+.cajaBusqueda {
+    border: 2px solid #000000;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 10px;
+    height: 30px;
+    width: 90%;
+    padding-left: 10px;
+    border-radius: 10px;
+    font-size: 15px;
+}
+
+.cajaBusqueda:focus {
+    background-color: #3540a51b;
+    outline: none;
+}
+
+form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    align-items: center;
+}
+
+.popupContainer{
+    background-color: rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+}
+
+.popup{
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px gray;
+    padding: 10px 25px;
+    width: 80%;
+    max-width: 100%;
+}
+
+.smallButton{
+    
 }
 
 @media (max-width: 600px) {

@@ -4,6 +4,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import InputDef from '../components/inputBonito'
 import styles from '../styles/Login.module.css'
+
 const Login = () => {
   return (
     <div className={styles.container}>
@@ -15,18 +16,22 @@ const Login = () => {
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-         MyUNify
+          MyUnify
         </h1>
         <div className={styles.avisoAdvertencia}>
           <h1>Ups... esta página no está diseñada para computadores</h1>
           <h2>Por favor ingresa desde un celular</h2>
         </div>
-        <InputDef {...["Usuario"]}></InputDef>
-        <InputDef {...["Contraseña"]}></InputDef>
-        <section className={styles.Flex1}>
-        <button className={styles.botonEstandar}><Link href={"/registro"}>Login</Link> </button>
-        </section>
-       
+
+        <div className={styles.divFila}>
+          <h3>Usuario</h3>
+          <input />
+        </div>
+        <div className={styles.divFila}>
+          <h3>Contraseña</h3>
+          <input />
+        </div>
+        <button><Link href={"/home/home"}>Login</Link> </button>
       </main>
 
       <footer className={styles.footer}>
