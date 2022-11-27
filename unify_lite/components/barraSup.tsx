@@ -24,7 +24,7 @@
                       Parches
                       </Link>
                   </div>
-            <img src={"/lupita.svg"}></img>
+            <img src={"/lupita.svg"} ></img>
             </nav>
             </>
           );
