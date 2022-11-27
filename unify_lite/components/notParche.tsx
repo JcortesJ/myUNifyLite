@@ -3,6 +3,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
 import styles from '../styles/Notificacion.module.css'
+import styles2 from '../styles/Login.module.css'
 import buttonStyles from '../styles/Buttons.module.css'
 import Etiquetas from '../components/etiqueta'
 import { useRef } from 'react'
@@ -16,26 +17,24 @@ const NotParche= (props:string[]) => {
   const aceptarBtn = useRef<HTMLButtonElement>(null);
   const eliminarBtn = useRef<HTMLButtonElement>(null);
   if(aceptarBtn.current!=null && eliminarBtn.current!=null){
-      aceptarBtn.current.style.left = "20%";
-      aceptarBtn.current.style.bottom = "0%";
-      aceptarBtn.current.style.display = 'relative';
-      eliminarBtn.current.style.display = 'none';
+      eliminarBtn.current.style.display = 'none'
   }
   return (
-   <div className={styles.divNotificacion}>
-        <img></img> imagen xd 
-        <div className={styles.divElements}>
+   <div className={styles2.divAmigo}>
+        <img src={"/user_circulo.svg"}className={styles.divAmigoImagen}></img>
+        <div className={styles.divAmigoNotInfo}>
             <h2>{props[0]}</h2> 
             <h4>Descripcion del grupo: <br></br>{props[1]}</h4>
             <div className={styles.divEtiqueta}>
-                <Etiquetas{...["etiqueta1"]}> </Etiquetas>
-                <Etiquetas{...["etiqueta1"]}> </Etiquetas>
+              <div className="flex m-0.5 px-1 rounded-md content-center items-center bg-orange text-white">Entretenimiento</div>
+              <div className="flex m-0.5 px-1 rounded-md content-center items-center  bg-orange text-white">Entretenimiento</div>
+              <div className="flex m-0.5 px-1 rounded-md content-center items-center  bg-orange text-white">Entretenimiento</div>              
             </div>                      
         </div>
-        <div className={styles.divParcheAceptar}>
-          <button className = {buttonStyles.buttonTrue} ref = {aceptarBtn}> Aceptar </button>
-          <button className={buttonStyles.buttonFalse} ref={eliminarBtn}> {props[2]}</button>
-        </div>
+        
+        <button className = {buttonStyles.buttonTrue} ref = {aceptarBtn}> Aceptar </button>
+        <button className={buttonStyles.buttonFalse} ref={eliminarBtn}> {props[2]}</button>
+        
         
    </div>
   )

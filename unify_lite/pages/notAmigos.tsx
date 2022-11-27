@@ -4,35 +4,28 @@ import Image from 'next/image'
 import Link from 'next/link'
 import Notificacion from '../components/notAmistad'
 import Evento from '../components/notParche'
+import NavSup from '../components/supNotAmigo' 
+import Navbar from '../components/Navbar'
 import styles from '../styles/Login.module.css'
 const NotAmigos = () => {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Login</title>
+        <title>Solicitudes</title>
         <meta name="description" content="Social Media App" />
         <link rel="icon" href="/Frame.ico" />
       </Head>
 
       <main className={styles.main}>
-        <h1 className={styles.title}>
-         MyUNify
-        </h1>
-        <div className={styles.avisoAdvertencia}>
-          <h1>Ups... esta página no está diseñada para computadores</h1>
-          <h2>Por favor ingresa desde un celular</h2>
-        </div>
+        <NavSup></NavSup>
         <Notificacion{...["Usuario 1", "Quiere ser tu amix", "Eliminar"]}> </Notificacion>
-        <Evento{...["Parche 1", "xxxxx xxxxxx xxxxx", "xd"]}> </Evento> 
-        <section className={styles.Flex1}>
-            <button className={styles.botonEstandar}><Link href={"/registro"}>Login</Link> </button>
-        </section>
-       
+        <Notificacion{...["Usuario 2", "Quiere ser tu amix", "Eliminar"]}> </Notificacion>
+        <Notificacion{...["Usuario 3", "Quiere ser tu amix", "Eliminar"]}> </Notificacion>
+        <Notificacion{...["Usuario 4", "Quiere ser tu amix", "Eliminar"]}> </Notificacion>
+  
       </main>
 
-      <footer className={styles.footer}>
-        <p> No tienes cuenta? </p>  <br></br> <a className={styles.linkNegro} href={"/registro"}>Registrate Aquí</a>
-      </footer>
+      <Navbar></Navbar>
     </div>
   )
 }
