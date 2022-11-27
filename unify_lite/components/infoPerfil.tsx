@@ -12,7 +12,7 @@ const InfoPerfil = (props:string[]) => {
   return (
    <div className={styles.infoDiv}>
         <h2 className={styles.number}> {props[0]}</h2>
-         {props[1]}
+        <h4 className={styles.sectionText}>{props[1]}</h4>
    </div>
   )
 }
