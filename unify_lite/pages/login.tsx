@@ -2,13 +2,16 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
-import { FormEvent, useState } from 'react'
+import { FormEvent, useEffect, useState } from 'react'
 import InputDef from '../components/inputBonito'
 import styles from '../styles/Login.module.css'
 
 const Login = () => {
   const [usuario,setUsuario] =useState("");
   const[clave,setClave] = useState("");
+  const [dataUsuarios, setdataAmigos] = useState<any[]>([]);
+  const [logeado,setLog] = useState(false); 
+
 
 
   const onSubmit = (e: FormEvent) => {
@@ -22,8 +25,47 @@ const Login = () => {
     }
 
     console.log(objetoPrueba)
+    actualizarPagina(objetoPrueba);
     // saveFormData(objetoPrueba);
     //primero hay que entender como funciona esto
+
+}
+
+async function getPageData() {
+  const apiUrlEndpoint = './api/traerUsuarios';
+  const response = await fetch(apiUrlEndpoint)
+  const res = await response.json();
+  setdataAmigos(res.usuarios);
+}
+
+useEffect(
+  () => {
+    getPageData()
+  }
+);
+
+async function actualizarPagina(datosLogin:any) {
+  await getPageData();
+  //map para buscar que los registros si dne 
+  dataUsuarios.map(indice => {
+    //traemos los datos
+    let nombreVerificar = indice.apodos;
+    let claveVerificar = indice.clave;
+    //los guardamos en un array
+    if (nombreVerificar == datosLogin.usuario && claveVerificar == datosLogin.clave) {
+      alert('inicio de sesion exitoso ' + usuario);
+      window.location.href = '/home/home';
+      setLog(true);
+    }
+  });
+  //luego de hacer el map seteamos la nueva variable
+  setTimeout(() => {
+    console.log(dataUsuarios);
+  }, 200);
+  
+  if(!logeado){
+    alert('Datos invalidos vuelva a intentar');
+  }
 }
 
   return (
@@ -51,7 +93,7 @@ const Login = () => {
           <h3>Contraseña</h3>
           <input type={'password'} onChange={i => setClave((i.target as HTMLInputElement).value)}/>
         </div>
-        <button className={styles.botonLogin}  onClick={onSubmit}><Link href={"/login"}>Login</Link> </button>
+        <button className={styles.botonLogin}  onClick={onSubmit}>Login </button>
       </main>
 
       <footer className={styles.footer}>
