@@ -27,8 +27,6 @@ const NotParche= (props:string[]) => {
             <h4>Descripcion del grupo: <br></br>{props[1]}</h4>
             <div className={styles.divEtiqueta}>
               <div className="flex m-0.5 px-1 rounded-md content-center items-center bg-orange text-white">Entretenimiento</div>
-              <div className="flex m-0.5 px-1 rounded-md content-center items-center  bg-orange text-white">Entretenimiento</div>
-              <div className="flex m-0.5 px-1 rounded-md content-center items-center  bg-orange text-white">Entretenimiento</div>              
             </div>                      
         </div>
         

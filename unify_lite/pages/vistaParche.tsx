@@ -12,7 +12,7 @@ import Navbar from '../components/Navbar'
 
 const VistaParche = () => {
   const molestar = () =>{
-    alert("funcionalidad aun en proceso");
+    
   }
   return (
     <div className={styles.container}>
@@ -21,6 +21,7 @@ const VistaParche = () => {
         <meta name="description" content="Social Media App" />
         <link rel="icon" href="/Frame.ico" />
       </Head>
+      <div className={styles.cajitaScroll}>
       <header className = {parche.headerPar}>     
           <Link href='buscarParches'>         
             <div >
@@ -66,6 +67,7 @@ const VistaParche = () => {
         <button className={button.buttonTrue}> UNIRSE</button>
       </div>
 
+      </div>
       <Navbar></Navbar>
       
          

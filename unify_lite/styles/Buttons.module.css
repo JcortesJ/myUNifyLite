@@ -1,35 +1,36 @@
-.buttonTrue{
+.buttonTrue {
     border-radius: 8px;
     background-color: #575EA5;
     color: white;
     border: transparent;
-    width: fit-content;
-    height: fit-content;
+    width: 93px;
+    height: 19px;
+    padding: auto;
     display: inline-block;
-    
+    font-size: 14px;
+    margin-left: 6%;
 }
 
-.buttonTrue:hover{
+.buttonTrue:hover {
     cursor: pointer;
 }
 
-.buttonFalse{
+.buttonFalse {
     border-radius: 8px;
     background-color: #EFC6B6;
     color: black;
     border: transparent;
-    width: fit-content;
-    height: fit-content;
+    width: 93px;
+    height: 19px;
+    font-size: 14px;
     display: inline-block;
 }
 
-
-.buttonFalse:hover{
+.buttonFalse:hover {
     cursor: pointer;
 }
 
-
-.divButton{
+.divButton {
     padding-left: 5%;
     text-align: center;
 }

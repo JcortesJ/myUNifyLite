@@ -306,6 +306,7 @@
     }
     
     .divAmigo {
+        border: 2px solid;
         display: flex;
         flex-direction: row;
         border: 2px solid;
@@ -369,6 +370,6 @@
         height: 100vh;
         overflow-y: scroll;
         overflow-x: clip;
-        padding-bottom: 20%;
+        padding-bottom: 15vh;
         /*border: 2px solid; */
     }
