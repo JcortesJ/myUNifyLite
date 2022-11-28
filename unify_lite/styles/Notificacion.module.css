@@ -54,9 +54,10 @@
 
 .divAmigoImagen {
     /*border: 2px solid; */
-    width: 80px;
+    width: 90px;
     height: 80px;
     margin: auto;
+    margin-left: 3.5%;
 }
 
 .divParcheAceptar {

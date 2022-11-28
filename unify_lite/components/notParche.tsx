@@ -21,7 +21,7 @@ const NotParche= (props:string[]) => {
   }
   return (
    <div className={styles2.divAmigo}>
-        <img src={"/user_circulo.svg"}className={styles.divAmigoImagen}></img>
+        <img src={"/parche_foto.png"}className={styles.divAmigoImagen}></img>
         <div className={styles.divAmigoNotInfo}>
             <h2>{props[0]}</h2> 
             <h4>Descripcion del grupo: <br></br>{props[1]}</h4>
