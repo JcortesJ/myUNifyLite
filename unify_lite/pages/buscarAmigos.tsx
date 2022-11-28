@@ -89,6 +89,7 @@ const NotAmigos = () => {
 
 
         </div>
+        <Navbar></Navbar>
 
       </main>
     </div>

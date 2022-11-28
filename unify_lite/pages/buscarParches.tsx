@@ -15,11 +15,13 @@ const NotParche = () => {
       </Head>
 
       <main className={styles.main}>
-        <NavSup></NavSup>
+       <div className={styles.cajitaScroll}>
+       <NavSup></NavSup>
         <Evento{...["Parche 1", "xxxxx xxxxxx xxxxx", "xd"]}> </Evento> 
         <Evento{...["Parche 2", "xxxxx xxxxxx xxxxx", "xd"]}> </Evento> 
         <Evento{...["Parche 3", "xxxxx xxxxxx xxxxx", "xd"]}> </Evento> 
         <Evento{...["Parche 4", "xxxxx xxxxxx xxxxx", "xd"]}> </Evento> 
+       </div>
 
        
       </main>
