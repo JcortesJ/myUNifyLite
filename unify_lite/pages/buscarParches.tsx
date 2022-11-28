@@ -21,6 +21,10 @@ const NotParche = () => {
         <Evento{...["Parche 2", "xxxxx xxxxxx xxxxx", "xd"]}> </Evento> 
         <Evento{...["Parche 3", "xxxxx xxxxxx xxxxx", "xd"]}> </Evento> 
         <Evento{...["Parche 4", "xxxxx xxxxxx xxxxx", "xd"]}> </Evento> 
+        <Evento{...["Parche 4", "xxxxx xxxxxx xxxxx", "xd"]}> </Evento> 
+        <Evento{...["Parche 4", "xxxxx xxxxxx xxxxx", "xd"]}> </Evento> 
+        <Evento{...["Parche 4", "xxxxx xxxxxx xxxxx", "xd"]}> </Evento> 
+        <Evento{...["Parche 4", "xxxxx xxxxxx xxxxx", "xd"]}> </Evento> 
        </div>
 
        
