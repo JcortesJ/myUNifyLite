@@ -65,6 +65,7 @@ async function getPageData() {
                     input1.current.value = '';
                     setNombre('');
                 }
+                return;
                 
                 //previene un loop
             }
@@ -78,14 +79,13 @@ async function getPageData() {
 
   const actualizarPagina = async (event:any) =>  {
     event.preventDefault();
-    let existencia = false;
     //primero debemos verificar que el usuario no exista en la base de datos
     if(nombre != ''){
         verificarUsuario();
        //buscamos si el dato ya existe
        
-    if(existencia == false){
-        alert('usuario creado');
+    if(nombre != ''){
+        await getPageData();
     }
        
     }
