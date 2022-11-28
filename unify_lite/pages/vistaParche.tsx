@@ -17,7 +17,7 @@ const VistaParche = () => {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Parche</title>
+        <title className='mb-1'>Parche</title>
         <meta name="description" content="Social Media App" />
         <link rel="icon" href="/Frame.ico" />
       </Head>

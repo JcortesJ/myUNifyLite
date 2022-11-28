@@ -19,10 +19,10 @@ const Navbar = () => {
         <div className={styles.circulo} onClick={() => {
               setActivo(true);
             }}><i className="fa-solid fa-plus hover:text-orange"></i></div>
-      <Link href={"/home"}>
+      <Link href={"/buscarAmigos"}>
         <i className="fa-solid fa-user-group"></i>
       </Link>
-      <Link href={"/home"}>
+      <Link href={"/vistaParche"}>
         <i className="fa-solid fa-user"></i>
       </Link>
       {activo ? (
