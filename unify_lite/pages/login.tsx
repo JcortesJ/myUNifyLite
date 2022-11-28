@@ -14,7 +14,7 @@ const Login = () => {
   const [usuario,setUsuario] =useState("");
   const[clave,setClave] = useState("");
   const [dataUsuarios, setdataAmigos] = useState<any[]>([]);
-  const [logeado,setLog] = useState(false); 
+
 
 
 
@@ -58,16 +58,19 @@ async function actualizarPagina(datosLogin:any) {
     //los guardamos en un array
     if (nombreVerificar == datosLogin.usuario && claveVerificar == datosLogin.clave) {
       alert('inicio de sesion exitoso ' + usuario);
+      setUser(indice.ID);
+      //permite acceder a las otras paginas de la app
+      setAuth(true);
       window.location.href = '/home/home';
-      setLog(true);
+
     }
   });
   //luego de hacer el map seteamos la nueva variable
   setTimeout(() => {
     console.log(dataUsuarios);
   }, 200);
-  
-  if(!logeado){
+  //revisar este error de que este alert se muestre cuando se logea
+  if(auth==false){
     alert('Datos invalidos vuelva a intentar');
   }
 }

@@ -11,7 +11,8 @@ function MyApp({ Component, pageProps }: AppProps) {
   const [auth, setAuth] = useState(false);
   const [evento, setEvento] = useState("0");
   const [user, setUser] = useState('0');
-
+ //.Provider permite que todas las paginas puedan acceder a estas variables globales
+ //se define aqui por que esta es la pagina raiz de la aplicación.
   return (
     <UserContext.Provider value={{ user, setUser }}>
       <AuthContext.Provider value={{ auth, setAuth }}>

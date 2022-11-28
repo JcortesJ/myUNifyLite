@@ -13,6 +13,7 @@ const Registro = () => {
     const [clave, setClave] = useState("");
     const [email, setEmail] = useState("");
     const [ig, setIg] = useState("No tiene");
+    const [dataUsuarios, setdataAmigos] = useState<any[]>([]);
   
 //primero debemos crear la conexión
 //con la db
@@ -43,8 +44,35 @@ async function getPageData() {
 
 
   async function actualizarPagina() {
-    await getPageData();
-    alert('datos creados')
+    //primero debemos verificar que el usuario no exista en la base de datos
+    let existe = false;
+    if(nombre != ''){
+        const apiUrlEndpoint2 = './api/traerUsuarios';
+    const response = await fetch(apiUrlEndpoint2)
+    const res2 = await response.json();
+    setdataAmigos(res2.usuarios);
+    //buscamos si el dato ya existe
+    dataUsuarios.map(indice => {
+        //traemos los datos
+        let nombreVerificar = indice.apodos;
+        //los guardamos en un array
+        if (nombreVerificar == nombre ) {
+          alert('Este nombre de usuario ya existe, por favor intenta con otro');
+         // window.location.href = '/registro';
+          existe = true;
+        }
+      });
+      if(existe==false){
+        await getPageData();
+        alert('usuario creado, dirigase a login')
+        window.location.href = '/login';
+      }
+    
+    }
+    else{
+        alert('ingrese un usuario valido');
+    }
+    
   }
       
 
@@ -68,7 +96,7 @@ async function getPageData() {
                         <h1>Ups... esta página no está diseñada para computadores</h1>
                         <h2>Por favor ingresa desde un celular</h2>
                     </div>
-                    <form>
+                    <div className={styles.centrado}>
                         <div className={styles.divFila}>
                             <h3>¿Cómo quieres llamarte?</h3>
                             <input name={'nom_user'} required={true} onChange={n => setNombre((n.target as HTMLInputElement).value)} />
@@ -95,7 +123,7 @@ async function getPageData() {
                                 ¡Iniciemos! </button>
 
                         </section>
-                    </form>
+                    </div>
 
 
                 </div>

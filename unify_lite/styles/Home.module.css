@@ -316,6 +316,14 @@
         padding: 1%;
         position: relative;
     }
+    .centrado {
+        /*border: 2px solid; */
+        width: 98%;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
     .flex3>div {
         border: 2px solid;
         font-size: 24px;
