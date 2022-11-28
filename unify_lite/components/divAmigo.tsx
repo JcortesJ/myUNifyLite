@@ -19,8 +19,8 @@ const DivAmigo = (props:string[]) => {
 
       <div className={styles.divAmigoInfo}>
         <h1>{nombreU}</h1>
-        <h2>Parches en común: {numeroP}</h2>
-        <h2>Amigos en común: {numeroA}</h2>
+        <h2>Numero de Parches: {numeroP}</h2>
+        <h2>Numero de Amigos: {numeroA}</h2>
       </div>
       <div className={styles.div3lineas}>
         <img src={"tres_puntos.svg"} onClick={molestar}></img>

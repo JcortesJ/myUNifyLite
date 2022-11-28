@@ -1,6 +1,3 @@
-// Next.js API route support: https://nextjs.org/docs/api-routes/introduction
-import type { NextApiRequest, NextApiResponse } from 'next'
-
 
 import {kuery} from '../../config/db';
 
@@ -9,14 +6,14 @@ import {kuery} from '../../config/db';
 export default async function handler(req:any,res:any){
         try{
             //intentamos hacer nuestra query
-            const query:string = 'SELECT * FROM EVENTO';
+            const query:string = 'SELECT * FROM usuario';
             //'SELECT * FROM reportes'
             //'SELECT nombre_variable AS nombre,valor_medicion AS valor FROM registros JOIN sensores ON registros.id_sensor=sensores.id_sensor JOIN variables  ON sensores.id_variable=variables.id_variable'
             const values:string[] = [];
             //esta parte ejecuta nuestra consulta por medio de una funcion asincrona
             const data = await kuery(query,[]) ;
  
-            res.status(200).json({reportes: data});
+            res.status(200).json({usuarios: data});
             //terminamos la conexión por seguridad
             //mostramos en el frontend los valores
 
