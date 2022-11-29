@@ -1,4 +1,4 @@
-.headerPar{
+.headerPar {
     display: flex;
     margin-top: 5%;
     width: 100%;
@@ -7,7 +7,7 @@
     padding-right: 5%;
 }
 
-.divText{
+.divText {
     width: 80%;
     margin-left: 6%;
     margin-right: auto;
@@ -16,19 +16,19 @@
     font-family: 'Titillium';
     font-weight: bold;
     font-size: 30px;
-
 }
 
-
-.divFoto{
+.divFoto {
     border-radius: 80%;
+    position: relative;
     width: 25vh;
     height: 25vh;
     margin: auto;
+    margin-left: 30%;
+    margin-top: 5%;
     margin-bottom: 5%;
     background-color: #575EA5;
     overflow: hidden;
-
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -36,13 +36,11 @@
     align-items: center;
 }
 
-.divFoto img{
+.divFoto img {
     align-self: center;
-
-
 }
 
-.styleH1{
+.styleH1 {
     color: #575EA5;
     font-weight: bold;
     font-size: 30px;
@@ -50,7 +48,7 @@
     margin-right: auto;
 }
 
-.styleH2{
+.styleH2 {
     font-family: "Arimo";
     font-size: 25px;
     font-weight: normal;
@@ -58,14 +56,14 @@
     margin-right: auto;
 }
 
-.basicDiv{
+.basicDiv {
     margin: auto;
     display: flex;
     text-align: center;
     padding-top: 2%;
 }
 
-.infoDiv{
+.infoDiv {
     padding-left: 5%;
     padding-right: 5%;
     height: fit-content;

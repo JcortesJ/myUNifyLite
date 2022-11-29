@@ -68,6 +68,12 @@ const EventoInfo = () => {
     }, 200);
   }
 
+  const molestar = () =>{
+      alert('evento reportado');
+    
+    
+
+  }
 
   return (
     <div className={styles.container}>
@@ -91,7 +97,7 @@ const EventoInfo = () => {
                 {a[1]}
             </div>
             <div className='h-full w-1/5 flex content-center items-center justify-center '>
-                <i className="fa-solid fa-exclamation hover:text-orange transition-all"></i>
+                <i className="fa-solid fa-exclamation hover:text-orange transition-all" onClick={molestar}></i>
             </div>
         </div>
         
