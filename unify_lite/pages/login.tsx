@@ -56,12 +56,17 @@ const Login = () => {
     //map para buscar que los registros si dne 
     dataUsuarios.map(indice => {
       //traemos los datos
+      let idUser = indice.id_usuario;
       let nombreVerificar = indice.apodos;
       let claveVerificar = indice.clave;
       //los guardamos en un array
+      setUser(idUser);
+      console.log(user);
       if (nombreVerificar == datosLogin.usuario && claveVerificar == datosLogin.clave) {
+        
         alert('inicio de sesion exitoso ' + usuario);
-        setUser(indice.ID);
+        
+        
         //permite acceder a las otras paginas de la app
         setAuth(true);
         logueado = true;

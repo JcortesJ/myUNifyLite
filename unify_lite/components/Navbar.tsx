@@ -22,7 +22,7 @@ const Navbar = () => {
       <Link href={"/buscarAmigos"}>
         <i className="fa-solid fa-user-group"></i>
       </Link>
-      <Link href={"/vistaParche"}>
+      <Link href={"/perfil/vistaPerfil"}>
         <i className="fa-solid fa-user"></i>
       </Link>
       {activo ? (

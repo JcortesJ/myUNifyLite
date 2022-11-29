@@ -7,6 +7,7 @@ import styles2 from '../styles/Login.module.css'
 import buttonStyles from '../styles/Buttons.module.css'
 import Etiquetas from '../components/etiqueta'
 import { useRef } from 'react'
+import { useIdBusqueda } from '../contexts/idBusqueda';
 
 
 
@@ -14,17 +15,20 @@ import { useRef } from 'react'
 // recibe un arreglo con: Primero el título, despues una descripcion/texto auxiliar, 
 //y por ultimo el mensaje del buttonFalse
 const NotParche= (props:string[]) => {
+  const { idBusqueda, setIdBusqueda } = useIdBusqueda();
   const aceptarBtn = useRef<HTMLButtonElement>(null);
   const eliminarBtn = useRef<HTMLButtonElement>(null);
   if(aceptarBtn.current!=null && eliminarBtn.current!=null){
       eliminarBtn.current.style.display = 'none'
   }
   return (
-   <div className={styles2.divAmigo}>
+    <>
+    <Link href={'/vistaParche'}>
+   <div className={styles2.divAmigo} onClick={()=> setIdBusqueda(props[0])}>
         <img src={"/parche_foto.png"}className={styles.divAmigoImagen}></img>
         <div className={styles.divAmigoNotInfo}>
-            <h2>{props[1]}</h2> 
-            <h4>Descripcion: <br></br>{props[2]}</h4>
+            <h2 >{props[1]}</h2> 
+            <h4 >Descripcion: <br></br>{props[2]}</h4>
             <div className={styles.divEtiqueta}>
               <div className="flex m-0.5 px-1 rounded-md content-center items-center bg-orange text-white">Entretenimiento</div>
             </div>                      
@@ -35,6 +39,8 @@ const NotParche= (props:string[]) => {
         
         
    </div>
+   </Link>
+  </>
   )
 }
 

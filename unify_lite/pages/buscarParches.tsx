@@ -69,7 +69,6 @@ const NotParche = () => {
             <button type={'submit'}><img src={"/lupita.svg"} onClick={actualizarPagina}></img></button>
         </nav>
         {mostrarParches.map((a: string[]) => (<Evento{...a} key={a[0]}></Evento>))}
-        <Evento{...["Parche 1", "xxxxx xxxxxx xxxxx", "xd"]}> </Evento>
        </div>
 
        
