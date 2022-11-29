@@ -11,7 +11,7 @@ import DivEvento from '../../components/DivEvento'
 const HomeBusqueda = () => {
 
 
-  
+
 
   return (
     <div className={styles.container}>
@@ -40,16 +40,6 @@ const HomeBusqueda = () => {
         </div> 
         <div className={styles.contenidoHome}>
           <NotiEvento></NotiEvento>
-          <DivEvento></DivEvento> 
-
-          <DivEvento></DivEvento> 
-          <DivEvento></DivEvento> 
-          <DivEvento></DivEvento> 
-          <DivEvento></DivEvento> 
-          <DivEvento></DivEvento> 
-          <DivEvento></DivEvento> 
-          
-          <DivEvento></DivEvento> 
 
         </div>
         <Navbar></Navbar>
