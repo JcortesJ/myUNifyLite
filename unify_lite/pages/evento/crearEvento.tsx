@@ -126,34 +126,34 @@ const CrearEvento = () => {
                     <form>
                         <div className={styles.divFila}>
                             <h3>¿Cómo lo vas a llamar?</h3>
-                            <input ref={input1} name={'nom_ev'} required={true} onChange={n => setNombre((n.target as HTMLInputElement).value)} />
+                            <input ref={input1} title={'nom_ev'} required={true} onChange={n => setNombre((n.target as HTMLInputElement).value)} />
                         </div>
                         <div className={styles.divFila}>
                             <h3>¿Donde será?</h3>
-                            <input name={'lugar_ev'} required={true} onChange={l => setLugar((l.target as HTMLInputElement).value)} />
+                            <input title={'lugar_ev'} required={true} onChange={l => setLugar((l.target as HTMLInputElement).value)} />
                         </div>
                         <div className={styles.divFila}>
                             <h3>Describe tu evento</h3>
-                            <textarea name={'desc_ev'} required={true} onChange={d => setDes((d.target as HTMLTextAreaElement).value)} />
+                            <textarea title={'desc_ev'} required={true} onChange={d => setDes((d.target as HTMLTextAreaElement).value)} />
                             {/*cambiar por un textfield */}
                         </div>
                         <div className={styles.divFila}>
                             <h3>¿A qué horas será tu evento?</h3>
-                            <input name={'hor_ev'} required={true} onChange={h => setHora((h.target as HTMLInputElement).value)} />
+                            <input title={'hor_ev'} required={true} onChange={h => setHora((h.target as HTMLInputElement).value)} />
                             {/*cambiar por un textfield */}
                         </div>
                         <div className={styles.divFila}>
                             <h3>¿Qué dia estamos listos? 👀</h3>
-                            <input name={'dia_ev'} required={true} type={'date'} onChange={di => setDia((di.target as HTMLInputElement).value)} />
+                            <input title={'dia_ev'} required={true} type={'date'} onChange={di => setDia((di.target as HTMLInputElement).value)} />
                         </div>
 
                         <div className={styles.divFila}>
                             <h3>¿Qué facultad organiza esto? </h3>
-                            <input name={'fac_ev'} required={true} onChange={f => setFacultad((f.target as HTMLInputElement).value)} />
+                            <input title={'fac_ev'} required={true} onChange={f => setFacultad((f.target as HTMLInputElement).value)} />
                         </div>
 
                         <footer className={styles.footerNotMain}>
-                            <p> <input type={'checkbox'} /> Mi evento cumple con las normas de la comunidad </p>
+                            <p> <input type={'checkbox'} title={'check'} /> Mi evento cumple con las normas de la comunidad </p>
 
                         </footer>
                         <section className={styles.Flex1}>

@@ -12,13 +12,15 @@ import { useRef } from 'react'
 // recibe un arreglo con: Primero el título, despues una descripcion/texto auxiliar, 
 //y por ultimo el mensaje del buttonFalse
 const NotAmistad = (props:string[]) => {
-  const aceptar = useRef<HTMLButtonElement>(null);
-  const eliminar= useRef<HTMLButtonElement>(null);
-  if(eliminar.current!=null){
-    
-  }
+  const divGrande = useRef<HTMLDivElement>(null);
+ 
+  const borrarNot = () =>{
+    if(divGrande.current!=null){
+      divGrande.current.style.display='none';
+    }
+  };
   return (
-   <div className={styles2.divAmigo}>
+   <div className={styles2.divAmigo} ref={divGrande}>
         <img src={"/user_circulo.svg"}className={styles.divAmigoImagen}></img>
         <div className={styles.divAmigoNotInfo}>
             <h2>{props[0]}</h2> 
@@ -27,8 +29,8 @@ const NotAmistad = (props:string[]) => {
         </div>
         
         <div className={buttonStyles.divButton}>
-            <button className = {buttonStyles.buttonTrue} ref={aceptar}> Aceptar </button>
-            <button className={buttonStyles.buttonFalse} ref={eliminar}> {props[2]}</button>
+            <button className = {buttonStyles.buttonTrue}  onClick={borrarNot}> Aceptar </button>
+            <button className={buttonStyles.buttonFalse} onClick={borrarNot}> {props[2]}</button>
 
         </div>
    </div>
