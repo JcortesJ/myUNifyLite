@@ -37,7 +37,7 @@ const VistaParche = () => {
     },[]
   )
 
-  async function actualizarPagina(data: any) {
+  async function actualizarPagina() {
     await getPageData();
     let arrAux: string[][] = [['jiji']];
     //map para insertar en mostrarEventos
