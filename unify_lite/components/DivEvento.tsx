@@ -32,11 +32,9 @@ const DivEvento = (props:string[]) => {
         Creado por PLATZI
         </div> */}
         <div className="w-full text-xs h-6 flex whitespace-nowrap overflow-hidden content-center items-center font-titillium font-bold text-white">
+          <div className="flex mx-0.5 px-0.5 rounded-md content-center items-center bg-orange">Deporte</div>
+          <div className="flex mx-0.5 px-0.5 rounded-md content-center items-center bg-orange">Cultura</div>
           <div className="flex mx-0.5 px-0.5 rounded-md content-center items-center bg-orange">Entretenimiento</div>
-          <div className="flex mx-0.5 px-0.5 rounded-md content-center items-center bg-orange">Entretenimiento</div>
-          <div className="flex mx-0.5 px-0.5 rounded-md content-center items-center  bg-orange">Entretenimiento</div>
-          <div className="flex mx-0.5 px-0.5 rounded-md content-center items-center  bg-orange">Entretenimiento</div>
-
         </div>
       </div>
 

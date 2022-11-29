@@ -13,6 +13,7 @@ import { useIdBusqueda } from '../../contexts/idBusqueda';
 import { useEffect, useState } from 'react'
 import { useAuth } from '../../contexts/auth';
 import { useUser } from '../../contexts/user'
+import router from 'next/router'
 
 const VistaParche = () => {
   const {auth,setAuth} = useAuth();
@@ -66,6 +67,18 @@ const VistaParche = () => {
     setUser('0');
   }
 
+  async function borrarUsuario(){
+    setAuth(false);
+    setUser('0');
+    const apiUrlEndpoint = '../api/borrarUsuario/'+user;
+    const response = await fetch(apiUrlEndpoint)
+    const res = await response.json();
+    setdataPerfil(res.datos);
+    router.push('/login')
+  }
+
+
+
 
   return (
     <div className={styles.container}>
@@ -78,7 +91,7 @@ const VistaParche = () => {
       </Head>
       <div className={styles.cajitaScroll2}>
       <header className = {parche.headerPar}>     
-          <Link href='/home/home'>         
+          <Link href='/usuario/editarUsuario'>         
             <div >
                 <i className="fa-solid fa-pen-to-square text-lg hover:text-orange"></i>
             </div>
@@ -96,12 +109,9 @@ const VistaParche = () => {
       <div className={parche.divFoto} onClick={actualizarPagina}>
         <img src='https://www.researchgate.net/publication/309193314/figure/fig5/AS:418126849167364@1476700620332/Figura-7-Neros-en-Transmilenio-Jovenes-identificados-como-neros-en-Facebook-Recuperado.png'></img>
       </div>
-        
+      
       <div className={parche.basicDiv}>
-        <h1 className={parche.styleH1}>Lider</h1>
-      </div>
-      <div className={parche.basicDiv}>
-        <h2 className={parche.styleH2}> usuario (link)</h2>
+        <h2 className={parche.styleH2}> Instagram</h2>
       </div>
   
       <div className={parche.basicDiv}>
@@ -115,7 +125,7 @@ const VistaParche = () => {
       </div>
     </Link> 
     <div className={parche.basicDiv}>
-    <button > Borrar cuenta</button>
+    <button onClick={borrarUsuario}> Borrar cuenta</button>
   </div>
 
       </div>

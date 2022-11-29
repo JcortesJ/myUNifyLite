@@ -52,7 +52,7 @@ const CrearEvento = () => {
             <main className={styles.main}>
                 <div className={styles.cajitaScroll}>
                 <h3 className={styles.subtitle}>
-                    <a href={'/login'}><img width={22} height={22} src={"/back_arrow.svg"} /></a>Crear Evento 📒
+                    <a href={'/home/home'}><img width={22} height={22} src={"/back_arrow.svg"} /></a>Crear Evento 📒
                 </h3>
             
                 <div className={styles.avisoAdvertencia}>
