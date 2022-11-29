@@ -59,12 +59,12 @@ const CrearEvento = () => {
         function getRandomInt(max: number) {
             return Math.floor(Math.random() * max);
         }
-        let id_user:string | string[] | undefined = user;
+        
         let lugarI: number = getRandomInt(23);
         if(lugarI<17) lugarI=17;
         let ID = getRandomInt(1000).toString();
         let id_not = getRandomInt(1000).toString();
-        const insertarPrueba: string = ID+','+id_not+','+id_user+ ',' +lugarI.toString()+','+ '"' + nombreE + '"' +','+ '"' + descripcion + '"' + ',' + hora.toString() + ',' + '"' + dia + '"' + ',' + '"' + facultad + '"';
+        const insertarPrueba: string = ID+','+id_not+','+user?.toString()+ ',' +lugarI.toString()+','+ '"' + nombreE + '"' +','+ '"' + descripcion + '"' + ',' + hora.toString() + ',' + '"' + dia + '"' + ',' + '"' + facultad + '"';
         //'INSERT INTO EVENTO(id_evento,Notificacion_id_notificacion,Creador_id_creador,Lugar_id_lugar,nombre,descripcion,hora,fecha,facultad) VALUES ('+req.query.inserE+')';
         console.log(insertarPrueba);
         const apiUrlEndpoint = '../api/insertarEvento/' + insertarPrueba;
@@ -113,38 +113,9 @@ const CrearEvento = () => {
 
             <main className={styles.main}>
                 <div className={styles.cajitaScroll}>
-                <h3 className={styles.subtitle}>
-                    <a href={'/home/home'}><img width={22} height={22} src={"/back_arrow.svg"} /></a>Crear Evento 📒
-                </h3>
-            
-                <div className={styles.avisoAdvertencia}>
-                    <h1>Ups... esta página no está diseñada para computadores</h1>
-                    <h2>Por favor ingresa desde un celular</h2>
-                </div>
-                <div className={styles.rectanguloNaranja}></div>
-                <form onSubmit={onSubmit}>
-                    <div className={styles.divFila}>
-                        <h3>¿Cómo lo vas a llamar?</h3>
-                        <input name={'nom_ev'} required={true} onChange={n => setNombre((n.target as HTMLInputElement).value)}  />
-                    </div>
-                    <div className={styles.divFila}>
-                        <h3>¿Donde será?</h3>
-                        <input name={'lugar_ev'} required={true} onChange={l => setLugar((l.target as HTMLInputElement).value)}  />
-                    </div>
-                    <div className={styles.divFila}>
-                        <h3>Describe tu evento</h3>
-                        <textarea name={'desc_ev'} required={true} onChange={d => setDes((d.target as HTMLTextAreaElement).value)}  />
-                        {/*cambiar por un textfield */}
-                    </div>
-                    <div className={styles.divFila}>
-                        <h3>¿A qué horas será tu evento?</h3>
-                        <input name={'hor_ev'} required={true} onChange={h => setHora((h.target as HTMLInputElement).value)}  />
-                        {/*cambiar por un textfield */}
-                    </div>
-                    <div className={styles.divFila}>
-                        <h3>¿Qué dia estamos listos? 👀</h3>
-                        <input name={'dia_ev'} required={true} type={'date'} onChange={di => setDia((di.target as HTMLInputElement).value)}  />
-                    </div>
+                    <h3 className={styles.subtitle}>
+                        <a href={'/login'}><img width={22} height={22} src={"/back_arrow.svg"} /></a>Crear Evento 📒
+                    </h3>
 
                     <div className={styles.avisoAdvertencia}>
                         <h1>Ups... esta página no está diseñada para computadores</h1>
