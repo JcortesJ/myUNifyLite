@@ -14,9 +14,22 @@ import { useRef } from 'react'
 const NotAmistad = (props:string[]) => {
   const divGrande = useRef<HTMLDivElement>(null);
  
-  const borrarNot = () =>{
+  const borrarNot = async () =>{
     if(divGrande.current!=null){
       divGrande.current.style.display='none';
+    }
+    //selecciona si es un evento o usuario
+    if(props[1] == 'quiere ser tu amigo'){
+      console.log('amigo')
+      const apiUrlEndpoint = '../pages/api/borrarNotU/'+props[0];
+    const response = await fetch(apiUrlEndpoint)
+    const res = await response.json();
+    }
+    else{
+      console.log('evento')
+      const apiUrlEndpoint = '/api/borrarNotE/'+props[0];
+      const response = await fetch(apiUrlEndpoint)
+      const res = await response.json();
     }
   };
   return (
