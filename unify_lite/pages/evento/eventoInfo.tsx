@@ -15,7 +15,7 @@ const EventoInfo = () => {
   const [mostrarEvento, setMostrarEvento] = useState<string[][]>([['0', '0', 'Cargando Evento...']]);
 
   async function getPageData() {
-    const apiUrlEndpoint = '../api/eventos/'+idBusqueda;
+    const apiUrlEndpoint = '../api/eventosuse/'+idBusqueda;
     const response = await fetch(apiUrlEndpoint)
     const res = await response.json();
     setdataEvento(res.datos);

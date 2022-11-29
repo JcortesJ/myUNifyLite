@@ -11,16 +11,17 @@ import Etiqueta from '../components/etiqueta'
 import Navbar from '../components/Navbar'
 import { useIdBusqueda } from '../contexts/idBusqueda';
 import { useEffect, useState } from 'react'
+import { useUser } from '../contexts/user'
 
 const VistaParche = () => {
-  
+  const {user, setUser} = useUser();
   const { idBusqueda, setIdBusqueda } = useIdBusqueda();
   const [dataParche, setdataParche] = useState<any[]>([]);
   const [mostrarParche, setMostrarParche] = useState<string[][]>([['0', '0', 'Cargando Parche...']]);
 
   async function getPageData() {
     console.log(idBusqueda);
-    const apiUrlEndpoint = '../api/parches/'+idBusqueda;
+    const apiUrlEndpoint = '../api/parches/'+user+','+idBusqueda;
     const response = await fetch(apiUrlEndpoint)
     const res = await response.json();
     setdataParche(res.datos);
@@ -41,6 +42,7 @@ const VistaParche = () => {
       //traemos los datos
       let id = indice.id_creador_fraternidad;
       let nombre = indice.nombre;
+      
       //los guardamos en un array
       let arrIndice = [id, nombre];
       if (arrAux[0][0] == 'jiji') {

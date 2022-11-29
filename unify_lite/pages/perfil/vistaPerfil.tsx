@@ -27,7 +27,7 @@ const VistaParche = () => {
     const apiUrlEndpoint = '../api/usuario/'+user;
     const response = await fetch(apiUrlEndpoint)
     const res = await response.json();
-    setdataPerfil(res.datos);
+    setdataPerfil(res.datos[0]);
   }
 
   useEffect(
@@ -44,10 +44,13 @@ const VistaParche = () => {
     dataPerfil.map(indice => {
       //traemos los datos
       let id = indice.id_usuario;
-      let nombre = indice.apodos;
-      let instagram = indice.instagram;
+      let nombre = indice.apodo;
+      let instagram = indice.ig;
+      let totAmix = indice.amixCount;
+      let totEventos = indice.eventCount;
+      let ownEvent = indice.ownEvent;
       //los guardamos en un array
-      let arrIndice = [id, nombre,instagram];
+      let arrIndice = [id, nombre,instagram,totAmix,totEventos, ownEvent];
       if (arrAux[0][0] == 'jiji') {
         arrAux[0] = arrIndice;
       }
@@ -116,9 +119,9 @@ const VistaParche = () => {
       </div>
   
       <div className={parche.basicDiv}>
-          <Info{...["11", 'Usuarios que parchan']}></Info>
-          <Info{...["11", 'Eventos activos']}></Info>
-          <Info{...["11", 'Tus amigos en el parche']}></Info>
+          <Info{...[a[3], 'Amigos']}></Info>
+          <Info {...[a[5], 'Eventos creados']}></Info>
+          <Info{...[a[4], 'Eventos guardados']}></Info>
       </div>
     <Link href='/notAmigos'>
       <div className={parche.basicDiv}>
