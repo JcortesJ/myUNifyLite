@@ -37,29 +37,30 @@ const NotAmigos = () => {
   );
 
   async function actualizarPagina() {
-    console.log('tocando')
+    
     await getPageData();
+    console.log('datos notificaciones')
     console.log(dataNotificaciones);
     if(dataNotificaciones[0][0] !='' ){
       let arrAux: string[][] = [['jiji']];
     //map para insertar en mostrarAmigos
-    dataAmigos.map(indice => {
+    dataNotificaciones.map(indice => {
       //traemos los datos
       let solicitante:string = indice.solicitanteID;
       let solicitado:string = indice.solicitadoID;
       //los guardamos en un array
-      let arrIndice = [solicitante,solicitado];
-      console.log('pase por aqui')
-      if(solicitado ==user){
+      let arrIndice = ['No tienes notificaciones','revisa mas tarde','Eliminar'];
       
+      if(solicitado ==user){
+      console.log('usuario verificado')
         //buscamos el nombre del solicitante
         dataAmigos.map( (indice) =>{
-          
-            if(indice.ID == arrIndice[0]){
+          console.log('iniciamos ciclo')
+            if(indice.ID == solicitante){
+              console.log('usuario encontrado')
               arrIndice = [indice.apodos,'quiere ser tu amigo','Eliminar'];
             }
         });
-
         if (arrAux[0][0] == 'jiji') {
           arrAux[0] = arrIndice;
         }

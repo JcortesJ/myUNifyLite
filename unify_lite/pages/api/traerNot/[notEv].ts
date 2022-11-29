@@ -5,7 +5,7 @@ import {kuery} from '../../../config/db';
 export default async function handler(req:any,res:any){
         try{
             //intentamos hacer nuestra query
-            const query:string = 'CALL buscarNot_Ev_id('+req.query.notEv.toString()+')';
+            const query:string = 'CALL buscarNot_Ev_id('+req.query.notEv+')';
             const values:string[] = [];
             //esta parte ejecuta nuestra consulta por medio de una funcion asincrona
             const data = await kuery(query,[]) ;

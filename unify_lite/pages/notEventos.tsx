@@ -14,11 +14,11 @@ const NotEventos = () => {
   const [dataNotificaciones, setNotificaciones] = useState<any[]>([]);
   const [mostrarNotificaciones, setMostrarN] = useState<string[][]>([['Buscando Notificaciones...','cargando info...', 'Borrar', ]]);
   async function getPageData() {
-  
+    console.log('id usuario' +user)
     let apiUrlEndpoint = './api/traerNot/'+user;
     let response = await fetch(apiUrlEndpoint)
     let res = await response.json();
-    setNotificaciones(res.datos);
+    setNotificaciones(res.datos[0]);
   }
 
  
@@ -32,6 +32,7 @@ const NotEventos = () => {
 
   async function actualizarPagina() {
     await getPageData();
+    console.log('datos notificaciones ');
     console.log(dataNotificaciones);
     if(dataNotificaciones[0][0] !='' ){
       let arrAux: string[][] = [['jiji']];
@@ -39,7 +40,7 @@ const NotEventos = () => {
     dataNotificaciones.map(indice => {
       //traemos los datos
       let nom:string = indice.nombre;
-      //console.log('nombre:' +nom)
+      console.log('nombre:' +nom)
       //los guardamos en un array
       let arrIndice = [nom,'Evento Disponible','Borrar'];
         if (arrAux[0][0] == 'jiji') {
