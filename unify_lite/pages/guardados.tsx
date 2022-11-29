@@ -15,7 +15,7 @@ const Guardados = () => {
   const [dataEventos, setdataEventos] = useState<any[]>([]);
   const [mostrarEventos, setMostrarEventos] = useState<string[][]>([['0', '0', 'Eventos...']]);
   async function getPageData() {
-    const apiUrlEndpoint = '../api/buscarEventosGuardados/'+user;
+    const apiUrlEndpoint = '../api/buscarEventosGuardados/'+ user;
     const response = await fetch(apiUrlEndpoint)
     const res = await response.json();
     setdataEventos(res.datos);
