@@ -97,7 +97,7 @@ const EventoInfo = () => {
         
         <div className={styles.contenidoHome}>
             <div  onClick={actualizarPagina} className='w-full h-44 overflow-hidden bg-orange'>
-                <img  alt="Dinosaurio" src="https://th.bing.com/th/id/R.089f1e05b4d8ce916f5c7dee8bea4505?rik=KFo3hG6nVGp1Ww&riu=http%3a%2f%2fwww.home2b.nl%2fhome2b-secret-history%2fsecret-history-dinosaurs_files%2fimage014.jpg&ehk=6s4cp%2bosonOv6DL2zl7dgNh%2foBT6FGCVgo3Dt5QWO4%3d&risl=&pid=ImgRaw&r=0&sres=1&sresct=1"></img> 
+                <img  alt="Dinosaurio" src="https://agenciadenoticias.unal.edu.co/uploads/pics/AgenciadeNoticias-190621-01.jpg"></img> 
             </div>
             <div className='w-full h-fit p-2 flex flex-column flex-wrap content-center items-center justify-center text-center'>
                 <h1 className='font-bold w-full text-xl font-titillium text-purple'>Fecha</h1>
@@ -116,10 +116,10 @@ const EventoInfo = () => {
                 <p>{a[5]}</p>
             </div>
             <div className='w-full h-fit flex flex-row flex-wrap content-center justify-center font-titillium text-white items-center '>
-                <div className="flex m-0.5 px-1 rounded-md content-center items-center bg-orange">Entretenimiento</div>
-                <div className="flex m-0.5 px-1 rounded-md content-center items-center bg-orange">Entretenimiento</div>
+                <div className="flex m-0.5 px-1 rounded-md content-center items-center bg-orange">Deporte</div>
+                <div className="flex m-0.5 px-1 rounded-md content-center items-center bg-orange">Cultura</div>
                 <div className="flex m-0.5 px-1 rounded-md content-center items-center  bg-orange">Entretenimiento</div>
-                <div className="flex m-0.5 px-1 rounded-md content-center items-center  bg-orange">Entretenimiento</div>
+                <div className="flex m-0.5 px-1 rounded-md content-center items-center  bg-orange">Nutrición</div>
             </div>
             <button onClick={guardarEvento}>
                 Guardar

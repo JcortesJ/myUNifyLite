@@ -39,11 +39,6 @@ const Navbar = () => {
            Evento
          </button>
          </Link>
-         <Link href='/evento/crearEvento'>
-         <button>
-           Fraternidad
-         </button>
-         </Link>
        </div>
      </div>
       ):(

@@ -84,7 +84,7 @@ const VistaParche = () => {
       </header>
       
       <div className={parche.divFoto} onClick={actualizarPagina}>
-        <img src='https://www.researchgate.net/publication/309193314/figure/fig5/AS:418126849167364@1476700620332/Figura-7-Neros-en-Transmilenio-Jovenes-identificados-como-neros-en-Facebook-Recuperado.png'></img>
+        <img src='https://d1fdloi71mui9q.cloudfront.net/g7623yGRRFy42fKCXHIT_K2HxTj5Ha3dlH4J7'></img>
       </div>
         
       <div className={parche.basicDiv}>

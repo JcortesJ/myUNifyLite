@@ -122,7 +122,8 @@ async function getPageData() {
             <main className={styles.main}>
                 <div className={styles.cajitaScroll}>
                     <h3 className={styles.subtitle}>
-                        <a href={'/perfil/vistaPerfil'}><img width={22} height={22} src={"/back_arrow.svg"} /></a>Editar Usuario
+                        <Link href={'/perfil/vistaPerfil'}>
+                        <img width={22} height={22} src={"/back_arrow.svg"} /></Link>Editar Usuario
                     </h3>
 
                     <div className={styles.avisoAdvertencia}>
