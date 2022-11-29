@@ -50,7 +50,7 @@ const EventoInfo = () => {
       let datee= new Date(indice.fecha);
       let fecha = datee.getDate().toString()  + " / " + 
       datee.getMonth().toString() + " / " + datee.getFullYear().toString()
-       +" - "+ indice.hora.toString() + " A.M";
+       +" - "+ indice.hora.toString() + " horas";
       //los guardamos en un array
       let arrIndice = [id, nombre,fecha,lugar,creador,descripcion];
       if (arrAux[0][0] == 'jiji') {
@@ -97,7 +97,7 @@ const EventoInfo = () => {
         
         <div className={styles.contenidoHome}>
             <div  onClick={actualizarPagina} className='w-full h-44 overflow-hidden bg-orange'>
-                <img  alt="Dinosaurio" src="https://agenciadenoticias.unal.edu.co/uploads/pics/AgenciadeNoticias-190621-01.jpg"></img> 
+                <img  alt="Unal" src="https://agenciadenoticias.unal.edu.co/uploads/pics/AgenciadeNoticias-190621-01.jpg"></img> 
             </div>
             <div className='w-full h-fit p-2 flex flex-column flex-wrap content-center items-center justify-center text-center'>
                 <h1 className='font-bold w-full text-xl font-titillium text-purple'>Fecha</h1>

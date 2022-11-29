@@ -19,18 +19,20 @@ const NotAmigos = () => {
       <main className={styles.main}>
       <nav className={styles.divNavSup}>
         
-        <div className={styles.divCurrentVision}>
-        <Link href={"/notAmigos"}>
-         Solicitudes
-         </Link>
-      </div>
-        
-   
-      <div className={styles.divNotCurrent}>
-      <Link href={"/buscarParches"}>
-              Eventos
-              </Link>
-          </div>
+          <div className={styles.divCurrentVision}>
+      <Link href={"/notAmigos"}>
+          Solicitudes
+          </Link>
+        </div>
+       
+          
+    
+        <div className={styles.divNotCurrent}>
+        <Link href={"/evento/notEventos"}>
+                Eventos
+                </Link>
+            </div>
+            
     </nav>
         <div className={styles.cajitaScroll2}>
         <Notificacion{...["Usuario 1", "Quiere ser tu amix", "Eliminar"]}> </Notificacion>

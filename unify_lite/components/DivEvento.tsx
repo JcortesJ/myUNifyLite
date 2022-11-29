@@ -15,7 +15,7 @@ const DivEvento = (props:string[]) => {
     <Link href='/evento/eventoInfo'>
     <div className={styles.divEvento} onClick={()=> setIdBusqueda(props[0])}>
       <div className={styles.divEventoImagen}>
-        <img  alt="Dinosaurio" src="https://th.bing.com/th/id/R.eddbee180abf423179d312dff723ac19?rik=WMHSfCmQsupfFw&riu=http%3a%2f%2fstatic-1.ivoox.com%2fradios%2f2%2f3%2f7%2f1%2f2511549921732_XXL.jpg&ehk=FYqRCCE5qcaKKjPpEABq5HsikouM8gqzE8JeJR4t%2bFY%3d&risl=&pid=ImgRaw&r=0"></img>
+        <img  alt="Unal" src="https://th.bing.com/th/id/R.eddbee180abf423179d312dff723ac19?rik=WMHSfCmQsupfFw&riu=http%3a%2f%2fstatic-1.ivoox.com%2fradios%2f2%2f3%2f7%2f1%2f2511549921732_XXL.jpg&ehk=FYqRCCE5qcaKKjPpEABq5HsikouM8gqzE8JeJR4t%2bFY%3d&risl=&pid=ImgRaw&r=0"></img>
       </div>
       <div className={styles.divEventoInfo}>
         <div className="w-full h-9 leading-4 overflow-hidden flex content-center items-center font-bold text-purple font-titillium" >
