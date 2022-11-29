@@ -71,9 +71,9 @@ const NotAmigos = () => {
 
             
             <div >
-              <Link href={"/buscarAmigos"}>
+              <div onClick={actualizarPagina}>
                 Usuarios
-              </Link>
+              </div>
             </div>
 
 
@@ -82,7 +82,7 @@ const NotAmigos = () => {
                 Parches
               </Link>
             </div>
-            <button title={'botonActualziar'} type={'submit'}><img src={"/lupita.svg"} onClick={actualizarPagina}></img></button>
+            
           </nav>
 
           {/**trae los amigos y los muestra en un div */}
