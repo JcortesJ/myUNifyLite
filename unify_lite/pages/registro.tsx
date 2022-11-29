@@ -7,6 +7,7 @@ import InputDef from '../components/inputBonito'
 import styles from '../styles/Home.module.css'
 import mysql from "mysql2/promise"
 import { rejects } from 'assert'
+import router from 'next/router'
 
 const Registro = () => {
   
@@ -45,6 +46,7 @@ async function getPageData() {
     const apiUrlEndpoint = './api/insertarUsuario/'+insertarPrueba;
     const response = await fetch(apiUrlEndpoint)
     const res = await response.json();
+    router.push('/login')
     //alert(res.datos);
   } 
 

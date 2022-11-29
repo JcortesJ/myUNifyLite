@@ -2,8 +2,11 @@ import React, {useState} from 'react'
 //import {Link} from "react-scroll"; 
 import Link from 'next/link';
 import styles from '../styles/Login.module.css'
+import { useIdBusqueda } from '../contexts/idBusqueda';
 
 const DivAmigo = (props:string[]) => {
+  const { idBusqueda, setIdBusqueda } = useIdBusqueda();
+
   const molestar = () =>{
     alert("funcionalidad aun en proceso");
   }
@@ -13,7 +16,8 @@ const DivAmigo = (props:string[]) => {
     /* Inicializamos la pestaña como falsa porque estará cerrada y cambiara a lo largo del programa */
 
   return (
-    <div className={styles.divAmigo}>
+    <Link href='/usuario/vistaUsuario'>
+    <div className={styles.divAmigo} onClick={()=> setIdBusqueda(props[3])}>
      
         <img src={"/user_circulo.svg"}className={styles.divAmigoImagen}></img>
 
@@ -26,6 +30,7 @@ const DivAmigo = (props:string[]) => {
         <img src={"tres_puntos.svg"} onClick={molestar}></img>
       </div>
     </div>
+    </Link>
   );
 }
 

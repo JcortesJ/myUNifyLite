@@ -86,7 +86,7 @@ const NotAmigos = () => {
           </nav>
 
           {/**trae los amigos y los muestra en un div */}
-          {mostrarAmigos.map((a: string[]) => (<DivAmigo{...a} key={a[2]}></DivAmigo>))}
+          {mostrarAmigos.map((a: string[]) => (<DivAmigo{...a} key={a[3]}></DivAmigo>))}
 
 
         </div>
