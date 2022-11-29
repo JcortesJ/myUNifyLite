@@ -98,6 +98,7 @@ const NotAmigos = () => {
       <main className={styles.main}>
       <nav className={styles.divNavSup}>
         
+
         <div className={styles.divCurrentVision}>
         <div onClick={actualizarPagina}>
          Amigos
@@ -111,6 +112,7 @@ const NotAmigos = () => {
               </Link>
           </div>
         
+
     </nav>
         <div className={styles.cajitaScroll3}>
         { /*<Notificacion{...["Usuario 1", "Quiere ser tu amix", "Eliminar"]}> </Notificacion> */}

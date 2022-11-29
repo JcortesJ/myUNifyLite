@@ -64,8 +64,6 @@ const VistaParche = () => {
   }
 
   async function serAmigos(){
-    setAuth(false);
-    setUser('0');
     const data2 = idBusqueda+ ',' +user;
     console.log(data2);
     const apiUrlEndpoint = '../api/nuevaAmistad/'+data2;
