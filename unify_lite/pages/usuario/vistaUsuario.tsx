@@ -71,7 +71,7 @@ const VistaParche = () => {
   async function borrarUsuario(){
     setAuth(false);
     setUser('0');
-    const apiUrlEndpoint = '../api/borrarUsuario/'+user;
+    const apiUrlEndpoint = '../api/borrarUsuario/'+idBusqueda;
     const response = await fetch(apiUrlEndpoint)
     const res = await response.json();
     setdataPerfil(res.datos);
@@ -86,7 +86,7 @@ const VistaParche = () => {
       {mostrarPerfil.map((a: string[]) => (
       <>
       <Head>
-        <title >Perfil</title>
+        <title >Usuario</title>
         <meta name="description" content="Social Media App" />
         <link rel="icon" href="/Frame.ico" />
       </Head>
@@ -126,7 +126,6 @@ const VistaParche = () => {
       </div>
     </Link> 
     <div className={parche.basicDiv}>
-    <button onClick={borrarUsuario}> Borrar cuenta</button>
   </div>
 
       </div>
