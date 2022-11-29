@@ -17,12 +17,28 @@ const NotAmigos = () => {
       </Head>
 
       <main className={styles.main}>
-        <NavSup></NavSup>
+      <nav className={styles.divNavSup}>
+        
+        <div className={styles.divCurrentVision}>
+        <Link href={"/notAmigos"}>
+         Solicitudes
+         </Link>
+      </div>
+        
+   
+      <div className={styles.divNotCurrent}>
+      <Link href={"/buscarParches"}>
+              Eventos
+              </Link>
+          </div>
+    </nav>
+        <div className={styles.cajitaScroll2}>
         <Notificacion{...["Usuario 1", "Quiere ser tu amix", "Eliminar"]}> </Notificacion>
         <Notificacion{...["Usuario 2", "Quiere ser tu amix", "Eliminar"]}> </Notificacion>
         <Notificacion{...["Usuario 3", "Quiere ser tu amix", "Eliminar"]}> </Notificacion>
         <Notificacion{...["Usuario 4", "Quiere ser tu amix", "Eliminar"]}> </Notificacion>
   
+        </div>
       </main>
 
       <Navbar></Navbar>

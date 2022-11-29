@@ -373,12 +373,38 @@
         padding-bottom: 15vh;
         /*border: 2px solid; */
     }
-
-    .cajitaScroll2{
+    
+    .cajitaScroll2 {
         width: 100vw;
         height: 100vh;
         overflow-y: scroll;
         overflow-x: clip;
         padding-bottom: 100px;
         /*border: 2px solid; */
+    }
+    
+    .divNavSup {
+        display: flex;
+        border: transparent;
+        box-shadow: none;
+        align-items: center;
+        width: 100vw;
+        height: 75px;
+        padding: 1%;
+        position: relative;
+    }
+    
+    .divNotCurrent {
+        font-size: 24px;
+        width: 40%;
+        text-align: center;
+        border-right: solid 1px;
+    }
+    
+    .divCurrentVision {
+        border-bottom: solid 2px #C9420C;
+        font-size: 24px;
+        width: 40%;
+        text-align: center;
+        border-right: solid 1px;
     }
