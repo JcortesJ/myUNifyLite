@@ -9,6 +9,10 @@ import styles from '../../styles/Login.module.css'
 import DivEvento from '../../components/DivEvento'
 
 const HomeBusqueda = () => {
+
+
+  
+
   return (
     <div className={styles.container}>
       <Head>

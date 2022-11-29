@@ -3,17 +3,28 @@ import Head from 'next/head'
 import Navbar from '../../components/Navbar'
 import Link from 'next/link'
 import styles from '../../styles/Login.module.css'
-import { useEvento } from '../../contexts/evento'
+import { useIdBusqueda } from '../../contexts/idBusqueda'
 import { useEffect, useState } from 'react'
+import { useUser } from '../../contexts/user'
 
 
 const EventoInfo = () => {
-    const { evento, setEvento } = useEvento();
+  const {user, setUser} = useUser();
+    const { idBusqueda, setIdBusqueda } = useIdBusqueda();
     const [dataEvento, setdataEvento] = useState<any[]>([]);
   const [mostrarEvento, setMostrarEvento] = useState<string[][]>([['0', '0', 'Cargando Evento...']]);
 
   async function getPageData() {
-    const apiUrlEndpoint = '../api/eventos/'+evento;
+    const apiUrlEndpoint = '../api/eventos/'+idBusqueda;
+    const response = await fetch(apiUrlEndpoint)
+    const res = await response.json();
+    setdataEvento(res.datos);
+  }
+
+  async function guardarEvento() {
+    const datos =  user+','+idBusqueda
+    console.log(datos);
+    const apiUrlEndpoint = '../api/guardarEvento/'+datos;
     const response = await fetch(apiUrlEndpoint)
     const res = await response.json();
     setdataEvento(res.datos);
@@ -110,7 +121,7 @@ const EventoInfo = () => {
                 <div className="flex m-0.5 px-1 rounded-md content-center items-center  bg-orange">Entretenimiento</div>
                 <div className="flex m-0.5 px-1 rounded-md content-center items-center  bg-orange">Entretenimiento</div>
             </div>
-            <button >
+            <button onClick={guardarEvento}>
                 Guardar
             </button>
         </div>

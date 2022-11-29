@@ -2,28 +2,31 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
-import styles from '../styles/Home.module.css'
-import styles2 from '../styles/Login.module.css'
-import parche from '../styles/VistaParches.module.css'
-import button from '../styles/Buttons.module.css'
-import Info from '../components/infoPerfil'
-import Etiqueta from '../components/etiqueta'
-import Navbar from '../components/Navbar'
-import { useIdBusqueda } from '../contexts/idBusqueda';
+import styles from '../../styles/Home.module.css'
+import styles2 from '../../styles/Login.module.css'
+import parche from '../../styles/VistaParches.module.css'
+import button from '../../styles/Buttons.module.css'
+import Info from '../../components/infoPerfil'
+import Etiqueta from '../../components/etiqueta'
+import Navbar from '../../components/Navbar'
+import { useIdBusqueda } from '../../contexts/idBusqueda';
 import { useEffect, useState } from 'react'
+import { useAuth } from '../../contexts/auth';
+import { useUser } from '../../contexts/user'
 
 const VistaParche = () => {
-  
+  const {auth,setAuth} = useAuth();
+  const {user, setUser} = useUser();
   const { idBusqueda, setIdBusqueda } = useIdBusqueda();
-  const [dataParche, setdataParche] = useState<any[]>([]);
-  const [mostrarParche, setMostrarParche] = useState<string[][]>([['0', '0', 'Cargando Parche...']]);
+  const [dataPerfil, setdataPerfil] = useState<any[]>([]);
+  const [mostrarPerfil, setMostrarPerfil] = useState<string[][]>([['0', '0', 'Cargando Perfil...']]);
 
   async function getPageData() {
     console.log(idBusqueda);
-    const apiUrlEndpoint = '../api/parches/'+idBusqueda;
+    const apiUrlEndpoint = '../api/usuario/'+user;
     const response = await fetch(apiUrlEndpoint)
     const res = await response.json();
-    setdataParche(res.datos);
+    setdataPerfil(res.datos);
   }
 
   useEffect(
@@ -37,7 +40,7 @@ const VistaParche = () => {
     await getPageData();
     let arrAux: string[][] = [['jiji']];
     //map para insertar en mostrarEventos
-    dataParche.map(indice => {
+    dataPerfil.map(indice => {
       //traemos los datos
       let id = indice.id_creador_fraternidad;
       let nombre = indice.nombre;
@@ -50,37 +53,44 @@ const VistaParche = () => {
         arrAux.push(arrIndice);
       }
     });
-    setMostrarParche(arrAux);
+    setMostrarPerfil(arrAux);
     setTimeout(() => {
-      console.log(dataParche);
-      console.log(mostrarParche);
+      console.log(dataPerfil);
+      console.log(mostrarPerfil);
     }, 200);
     //luego de hacer el map seteamos la nueva variable
+  }
+
+  async function cerrarSesion(){
+    setAuth(false);
+    setUser('0');
   }
 
 
   return (
     <div className={styles.container}>
-      {mostrarParche.map((a: string[]) => (
+      {mostrarPerfil.map((a: string[]) => (
       <>
       <Head>
         <title >Parche</title>
         <meta name="description" content="Social Media App" />
         <link rel="icon" href="/Frame.ico" />
       </Head>
-      <div className={styles.cajitaScroll}>
+      <div className={styles.cajitaScroll2}>
       <header className = {parche.headerPar}>     
-          <Link href='buscarParches'>         
+          <Link href='/home/home'>         
             <div >
-                <i className="fa-solid fa-arrow-left hover:text-orange transition-all"></i>
+                <i className="fa-solid fa-pen-to-square text-lg hover:text-orange"></i>
             </div>
           </Link>
           <div className={parche.divText}>
           {a[1]}
           </div>
-          <div className={styles2.div3lineas}>
-            <img src={"tres_puntos.svg"}></img>
-          </div>
+          <Link href='/'>   
+            <div className={styles2.div3lineas} onClick={cerrarSesion}>
+            <i className="fa-solid fa-right-from-bracket text-lg hover:text-orange"></i>
+            </div>
+          </Link>
       </header>
       
       <div className={parche.divFoto} onClick={actualizarPagina}>
@@ -99,20 +109,14 @@ const VistaParche = () => {
           <Info{...["11", 'Eventos activos']}></Info>
           <Info{...["11", 'Tus amigos en el parche']}></Info>
       </div>
-      <div className={parche.infoDiv}>
-        <Etiqueta{...["Etiqueta 1"]}> </Etiqueta>
-        <Etiqueta{...["Etiqueta 2"]}> </Etiqueta>
-        <Etiqueta{...["Etiqueta 3"]}> </Etiqueta>
-        <Etiqueta{...["Etiqueta 4"]}> </Etiqueta>
-        <Etiqueta{...["Etiqueta 5"]}> </Etiqueta>
-        <Etiqueta{...["Etiqueta 6"]}> </Etiqueta>
-        <Etiqueta{...["Etiqueta 7"]}> </Etiqueta>
-
-      </div>
-
+    <Link href='/notAmigos'>
       <div className={parche.basicDiv}>
-        <button className={button.buttonTrue}> UNIRSE</button>
+        <button > Notificaciones</button>
       </div>
+    </Link> 
+    <div className={parche.basicDiv}>
+    <button > Borrar cuenta</button>
+  </div>
 
       </div>
       </>

@@ -69,6 +69,7 @@ const NotAmigos = () => {
         <div className={styles.cajitaScroll}>
           <nav className={styles.flex3}>
 
+            
             <div >
               <Link href={"/buscarAmigos"}>
                 Usuarios

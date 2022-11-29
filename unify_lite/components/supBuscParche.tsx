@@ -20,12 +20,11 @@ const div2 = useRef<HTMLDivElement>(null);
         
    
       <div className={styles.divCurrentVision}>
-      <Link href={"/buscarParches"}>
+            <Link href={"/buscarParches"}>
               Parches
-              </Link>
+            </Link>
           </div>
-    <img src={"/lupita.svg"}></img>
-    </nav>
+         </nav>
     </>
   );
 }

@@ -45,7 +45,7 @@ async function getPageData() {
     const apiUrlEndpoint = './api/insertarUsuario/'+insertarPrueba;
     const response = await fetch(apiUrlEndpoint)
     const res = await response.json();
-    alert(res.datos);
+    //alert(res.datos);
   } 
 
   const verificarUsuario =
@@ -178,7 +178,5 @@ async function getPageData() {
 }
 
 export default Registro;
-function verificarUsuario() {
-    throw new Error('Function not implemented.')
-}
+
 
