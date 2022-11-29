@@ -29,7 +29,7 @@ async function getPageData() {
     console.log(objetoPrueba);
  
     //UPDATE usuario SET apodos=?, clave=?,instagram=? WHERE id_usuario=?
-    const actualizarPrueba:string = 'SET apodos='+'"'+nombre+'"'+', clave='+'"'+clave+'"'+', instagram='+'"'+ig+'"'+' WHERE id_usuario='+user;
+    const actualizarPrueba:string = 'apodos='+'"'+nombre+'"'+', clave='+'"'+clave+'"'+', instagram='+'"'+ig+'"'+' WHERE id_usuario='+user;
     
     console.log(actualizarPrueba);
     const apiUrlEndpoint = '../api/modificarUsuario/'+actualizarPrueba;
@@ -41,7 +41,7 @@ async function getPageData() {
   const verificarUsuario =
     //una promesa es una función que ocurrira eventualmente o nunca
     async () =>{
-          const apiUrlEndpoint2 = './api/traerUsuarios';
+          const apiUrlEndpoint2 = '../api/traerUsuarios';
           const response = await fetch(apiUrlEndpoint2)
           const res2 = await response.json();
           setdataAmigos(res2.usuarios);
