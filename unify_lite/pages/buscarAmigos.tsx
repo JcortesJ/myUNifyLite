@@ -27,7 +27,7 @@ const NotAmigos = () => {
     }
   );
 
-  async function actualizarPagina(data: any) {
+  async function actualizarPagina() {
     await getPageData();
     let arrAux: string[][] = [['jiji']];
     //map para insertar en mostrarAmigos
@@ -82,7 +82,7 @@ const NotAmigos = () => {
                 Parches
               </Link>
             </div>
-            <button type={'submit'}><img src={"/lupita.svg"} onClick={actualizarPagina}></img></button>
+            <button title={'botonActualziar'} type={'submit'}><img src={"/lupita.svg"} onClick={actualizarPagina}></img></button>
           </nav>
 
           {/**trae los amigos y los muestra en un div */}
