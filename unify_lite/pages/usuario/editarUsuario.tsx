@@ -134,15 +134,15 @@ async function getPageData() {
                     </div>
                     <form >
                         <div className={styles.divFila}>
-                            <h3>¿Quieres cambiar tu usuario?</h3>
+                            <h3>Escoge tu nuevo usuario </h3>
                             <input ref={input1} name={'nom_user'} required={true} onChange={n => setNombre((n.target as HTMLInputElement).value)} />
                         </div>
                         <div className={styles.divFila}>
-                            <h3>¿Vas a escoger una contraseña nueva?</h3>
+                            <h3>Escoge una nueva contraseña</h3>
                             <input ref={input2} name={'clave_user'} required={true} onChange={l => setClave((l.target as HTMLInputElement).value)} />
                         </div>
                         <div className={styles.divFila}>
-                            <h3>¿Vas a cambiar tu ig?</h3>
+                            <h3>Actualiza tu ig (si asi lo deseas)</h3>
                             <input ref={input3} name={'ig_user'} required={true} onChange={d => setIg((d.target as HTMLInputElement).value)} />
                             {/*cambiar por un textfield */}
                         </div>
