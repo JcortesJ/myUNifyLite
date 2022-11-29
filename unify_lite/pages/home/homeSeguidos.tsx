@@ -8,13 +8,14 @@ import NotiEvento from '../../components/NotiEvento'
 import styles from '../../styles/Login.module.css'
 import DivEvento from '../../components/DivEvento'
 import { useEffect, useState } from 'react'
+import { useUser } from '../../contexts/user'
 
 const HomeSeguidos = () => {
-
+  const { user, setUser } = useUser();
   const [dataEventos, setdataEventos] = useState<any[]>([]);
   const [mostrarEventos, setMostrarEventos] = useState<string[][]>([['0', '0', 'Eventos...']]);
   async function getPageData() {
-    const apiUrlEndpoint = '../api/eventosUsuario/' ;
+    const apiUrlEndpoint = '../api/eventosUsuario/'+user;
     const response = await fetch(apiUrlEndpoint)
     const res = await response.json();
     setdataEventos(res.datos);
@@ -30,6 +31,9 @@ const HomeSeguidos = () => {
     await getPageData();
     let arrAux: string[][] = [['jiji']];
     //map para insertar en mostrarEventos
+    if (dataEventos.length == 1){
+      <p>No hay eventos para mostrar</p>
+    }else{
     dataEventos.map(indice => {
       //traemos los datos
       let id = indice.id_evento;
@@ -48,6 +52,7 @@ const HomeSeguidos = () => {
         arrAux.push(arrIndice);
       }
     });
+  }
     //luego de hacer el map seteamos la nueva variable
     setMostrarEventos(arrAux);
     setTimeout(() => {
@@ -72,7 +77,7 @@ const HomeSeguidos = () => {
             Para tí
             </div>
         </Link>
-        <div className='lineaNegra lineaSeleccionado h-full font-titillium text-xl w-2/5 flex content-center items-center justify-center '>
+        <div onClick={actualizarPagina} className='lineaNegra lineaSeleccionado h-full font-titillium text-xl w-2/5 flex content-center items-center justify-center '>
           Seguidos
         </div> 
         <Link href='/home/homeBusqueda' className='h-full w-1/5'>

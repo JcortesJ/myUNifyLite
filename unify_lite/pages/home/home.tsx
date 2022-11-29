@@ -11,10 +11,11 @@ import axios from 'axios'
 import { GetStaticProps, GetStaticPaths, GetServerSideProps } from 'next'
 import type { AppProps } from 'next/app'
 import { useEffect, useState } from 'react'
+import { useUser } from '../../contexts/user'
 
 
 const Home = () => {
-
+  const { user, setUser } = useUser();
   const [dataEventos, setdataEventos] = useState<any[]>([]);
   const [mostrarEventos, setMostrarEventos] = useState<string[][]>([['0', '0', 'Eventos...']]);
   async function getPageData() {
@@ -26,8 +27,9 @@ const Home = () => {
 
   useEffect(
     () => {
+      console.log(user);
       getPageData()
-    }
+    },[]
   );
 
   async function actualizarPagina(data: any) {

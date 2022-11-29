@@ -87,7 +87,7 @@ const VistaParche = () => {
           {a[1]}
           </div>
           <Link href='/'>   
-            <div className={styles2.div3lineas} onClick={cerrarSesion()}>
+            <div className={styles2.div3lineas} onClick={cerrarSesion}>
             <i className="fa-solid fa-right-from-bracket text-lg hover:text-orange"></i>
             </div>
           </Link>

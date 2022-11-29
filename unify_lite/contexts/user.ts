@@ -1,8 +1,8 @@
 import { createContext, useContext } from "react";
 
 export type GlobalList = {
-  user: string
-  setUser:(c: string) => void
+  user: string | string[] | undefined
+  setUser:(c: string | string[] | undefined) => void
 }
 //en este codigo creamos el tipo global y definimos la variable y el metodo para
 //actualizar

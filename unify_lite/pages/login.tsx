@@ -53,22 +53,23 @@ const Login = () => {
   async function actualizarPagina(datosLogin: any) {
     await getPageData();
     let logueado = false;
+    console.log(clave);
     //map para buscar que los registros si dne 
     dataUsuarios.map(indice => {
+      console.log('indice1'+indice.id_usuario);
+      
       //traemos los datos
       let idUser = indice.id_usuario;
       let nombreVerificar = indice.apodos;
       let claveVerificar = indice.clave;
       //los guardamos en un array
-      setUser(idUser);
-      console.log(user);
+      
       if (nombreVerificar == datosLogin.usuario && claveVerificar == datosLogin.clave) {
-        
         alert('inicio de sesion exitoso ' + usuario);
         
         
         //permite acceder a las otras paginas de la app
-        setAuth(true);
+       
         logueado = true;
         if (input1.current != null) {
           input1.current.value = "";
@@ -76,7 +77,7 @@ const Login = () => {
         if (input2.current != null) {
           input2.current.value = "";
         }
-        window.location.href = '/home/home';
+        window.location.href = '/home/'+indice.id_usuario;
         return 0;
       }
     });
