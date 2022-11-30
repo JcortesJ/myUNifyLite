@@ -34,7 +34,7 @@ const NotEventos = () => {
     await getPageData();
     console.log('datos notificaciones ');
     console.log(dataNotificaciones);
-    if(dataNotificaciones[0][0] !='' ){
+    if(dataNotificaciones[0] !=undefined ){
       let arrAux: string[][] = [['jiji']];
     //map para insertar en mostrarAmigos
     dataNotificaciones.map(indice => {
