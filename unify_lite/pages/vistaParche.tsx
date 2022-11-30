@@ -24,7 +24,7 @@ const VistaParche = () => {
     const apiUrlEndpoint = '../api/parches/'+user+','+idBusqueda;
     const response = await fetch(apiUrlEndpoint)
     const res = await response.json();
-    setdataParche(res.datos);
+    setdataParche(res.datos[0]);
   }
 
   useEffect(
@@ -41,10 +41,14 @@ const VistaParche = () => {
     dataParche.map(indice => {
       //traemos los datos
       let id = indice.id_creador_fraternidad;
-      let nombre = indice.nombre;
+      let nombre = indice.namePar;
+      let amixCount = indice.amixCount;
+      let eventCount = indice.eventCount;
+      let usersFrat = indice.usersFrat;
+      let lider = indice.jefe;
       
       //los guardamos en un array
-      let arrIndice = [id, nombre];
+      let arrIndice = [id, nombre,amixCount,eventCount,usersFrat,lider];
       if (arrAux[0][0] == 'jiji') {
         arrAux[0] = arrIndice;
       }
@@ -93,13 +97,13 @@ const VistaParche = () => {
         <h1 className={parche.styleH1}>Lider</h1>
       </div>
       <div className={parche.basicDiv}>
-        <h2 className={parche.styleH2}> usuario (link)</h2>
+        <h2 className={parche.styleH2}> {a[5]}</h2>
       </div>
   
       <div className={parche.basicDiv}>
-          <Info{...["11", 'Usuarios que parchan']}></Info>
-          <Info{...["11", 'Eventos activos']}></Info>
-          <Info{...["11", 'Tus amigos en el parche']}></Info>
+          <Info{...[ a[4], 'Usuarios que parchan']}></Info>
+          <Info{...[a[3], 'Eventos activos']}></Info>
+          <Info{...[a[2], 'Tus amigos en el parche']}></Info>
       </div>
       <div className={parche.infoDiv}>
         <Etiqueta{...["Etiqueta 1"]}> </Etiqueta>
