@@ -6,7 +6,7 @@ import {kuery} from '../../config/db';
 export default async function handler(req:any,res:any){
         try{
             //intentamos hacer nuestra query
-            const query:string = 'SELECT id_creador_fraternidad, nombre, descripcion FROM fraternidad';
+            const query:string = 'SELECT id_creador_fraternidad, nombre, descripcion FROM Fraternidad';
             const values:string[] = [];
             //esta parte ejecuta nuestra consulta por medio de una funcion asincrona
             const data = await kuery(query,[]) ;

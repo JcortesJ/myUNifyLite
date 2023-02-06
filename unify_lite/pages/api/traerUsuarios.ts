@@ -6,7 +6,7 @@ import {kuery} from '../../config/db';
 export default async function handler(req:any,res:any){
         try{
             //intentamos hacer nuestra query
-            const query:string = 'SELECT * FROM usuario';
+            const query:string = 'SELECT * FROM Usuario';
             //'SELECT * FROM reportes'
             //'SELECT nombre_variable AS nombre,valor_medicion AS valor FROM registros JOIN sensores ON registros.id_sensor=sensores.id_sensor JOIN variables  ON sensores.id_variable=variables.id_variable'
             const values:string[] = [];

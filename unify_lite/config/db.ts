@@ -1,14 +1,9 @@
-import mysql from "mysql2/promise";
+require('dotenv').config()
+const mysql = require('mysql2/promise')
 
 
 export async function kuery(query: any, values:any[] = []) {
-  const dbconnection = await mysql.createConnection({
-    host: 'localhost',
-    database: 'myunify',
-    user: 'root',
-    port: 3306,
-    password: 'toor'
-  });
+  const dbconnection = await mysql.createConnection(process.env.DATABASE_URL);
   try {
     const [results] = await dbconnection.execute(query, values);
     //console.log(results);
@@ -21,13 +16,3 @@ export async function kuery(query: any, values:any[] = []) {
   }
 }
 
-/**
- *  credenciales jeff
- *     host: 'localhost',
-    database: 'myunify',
-    user: 'root',
-    port: 3306,
-    password: ''
- * 
- * 
- */
