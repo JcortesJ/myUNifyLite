@@ -9,7 +9,7 @@ export default async function handler(req:any,res:any){
         try{
             //intentamos hacer nuestra query
 
-            const query:string = 'UPDATE usuario SET '+req.query.modUsuario;
+            const query:string = 'UPDATE Usuario SET '+req.query.modUsuario;
             //'UPDATE Usuario SET '+req.query.modUsuario+' WHERE id_usuario=';
             const data = await kuery(query,[]);
             

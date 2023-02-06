@@ -8,7 +8,7 @@ import { kuery } from '../../../config/db';
 export default async function handler(req:any,res:any){
         try{
             //intentamos hacer nuestra query
-            const query:string = 'INSERT INTO amigos (id_amigo1, id_amigo2) VALUES ('+req.query.id+')';
+            const query:string = 'INSERT INTO Amigos (id_amigo1, id_amigo2) VALUES ('+req.query.id+')';
          
             const data = await kuery(query,[]);
             

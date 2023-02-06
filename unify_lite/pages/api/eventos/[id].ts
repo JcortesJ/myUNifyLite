@@ -5,7 +5,7 @@ import {kuery} from '../../../config/db';
 export default async function handler(req:any,res:any){
         try{
             //intentamos hacer nuestra query
-            const query:string = 'SELECT id_evento,evento.nombre,lugar.nombre AS lugar, hora,fecha, nombre_creador, descripcion FROM evento INNER JOIN lugar ON Lugar_id_lugar= id_lugar INNER JOIN creador ON Creador_id_creador = id_creador WHERE id_evento='+req.query.id.toString();
+            const query:string = 'SELECT id_evento,Evento.nombre,Lugar.nombre AS Lugar, hora,fecha, nombre_creador, descripcion FROM Evento INNER JOIN Lugar ON Lugar_id_lugar= id_lugar INNER JOIN Creador ON Creador_id_creador = id_creador WHERE id_evento='+req.query.id.toString();
             const values:string[] = [];
             //esta parte ejecuta nuestra consulta por medio de una funcion asincrona
             const data = await kuery(query,[]) ;

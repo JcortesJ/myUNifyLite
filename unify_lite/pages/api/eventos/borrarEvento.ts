@@ -5,7 +5,7 @@ import {kuery} from '../../../config/db';
 export default async function handler(req:any,res:any){
         try{
             //intentamos hacer nuestra query
-            const query:string = 'DELETE FROM etiqueta WHERE id_etiqueta=9';
+            const query:string = 'DELETE FROM Etiqueta WHERE id_etiqueta=9';
             const values:string[] = [];
             //esta parte ejecuta nuestra consulta por medio de una funcion asincrona
             const data = await kuery(query,[]) ;
