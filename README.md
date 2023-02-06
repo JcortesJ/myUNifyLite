@@ -23,3 +23,12 @@ As an user you can:
 ### Main Purpose
 This project was the final assignement for the subjet 'Bases de datos' at 'Universidad Nacional de Colombia'.
 Also it was thought as an opportunity for learning CRUD operations, frontend-development and to create our first APIs.
+
+## Collaborators 
+
+Jefferson Ramirez (UI design,Frontend, Backend)
+jeramirezca@unal.edu.co
+Simon Ramos (Backend, Frontend)
+joramos@unal.edu.co
+Juan Cortes (Frontend, Backend)
+jcortesj@unal.edu.co
