@@ -26,9 +26,9 @@ Also it was thought as an opportunity for learning CRUD operations, frontend-dev
 
 ## Collaborators 
 
-Jefferson Ramirez (UI design,Frontend, Backend)
-jeramirezca@unal.edu.co
-Simon Ramos (Backend, Frontend)
-joramos@unal.edu.co
-Juan Cortes (Frontend, Backend)
-jcortesj@unal.edu.co
+Jefferson Ramirez (UI design,Frontend, Backend)\n
+jeramirezca@unal.edu.co\n
+Simon Ramos (Backend, Frontend)\n
+joramos@unal.edu.co\n
+Juan Cortes (Frontend, Backend)\n
+jcortesj@unal.edu.co\n
