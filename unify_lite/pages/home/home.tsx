@@ -27,13 +27,21 @@ const Home = () => {
 
   useEffect(
     () => {
-      console.log(user);
-      getPageData()
-    },[]
+      //averiguar porque aun no funciona
+      //console.log(user);
+      if(mostrarEventos[0][0] == '0' || mostrarEventos[0][1] == '0' || mostrarEventos[0][2] == 'Eventos...' || mostrarEventos[0][0] == '' || mostrarEventos[0][1] == '' || mostrarEventos[0][2] == '' ){
+        actualizarPagina()
+        console.log('actualizando')
+      }
+      
+    }
   );
 
-  async function actualizarPagina(data: any) {
-    await getPageData();
+  async function actualizarPagina() {
+    const apiUrlEndpoint = '../api/buscarEventoH';
+    const response = await fetch(apiUrlEndpoint)
+    const res = await response.json();
+    setdataEventos(res.datos);
     let arrAux: string[][] = [['jiji']];
     //map para insertar en mostrarEventos
     dataEventos.map(indice => {
